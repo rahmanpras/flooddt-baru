@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bandung Flood Digital Twin</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <!-- Select District Button (Floating Right) -->
+    <button id="btn-ganti-kecamatan" onclick="showKecamatanPicker()" style="position: absolute; top: 15px; right: 15px; z-index: 1000; padding: 0 16px; height: 38px; background: #1E2D4A; color: white; border: 1px solid #facc15; border-radius: 6px; font-weight: 600; font-size: 0.85rem; cursor: pointer; letter-spacing: 0.5px; box-shadow: 0 2px 4px rgba(0,0,0,0.3);">
+        Select District
+    </button>
+
+    <!-- Kecamatan Picker Modal -->
+    <div id="kecamatan-modal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.45); z-index:99999; align-items:center; justify-content:center; backdrop-filter:blur(4px);">
+        <div style="background:#ffffff; border-radius:12px; padding:32px; width:600px; max-width:95vw; max-height:88vh; overflow-y:auto; box-shadow:0 16px 48px rgba(0,0,0,0.25); position:relative;">
+            <!-- Close button -->
+            <button onclick="document.getElementById('kecamatan-modal').style.display='none'" style="position:absolute; top:16px; right:16px; background:none; border:none; font-size:1.2rem; color:#94a3b8; cursor:pointer; line-height:1;">✕</button>
+
+            <!-- Header -->
+            <div style="margin-bottom:20px;">
+                <h2 style="color:#1e293b; font-size:1.2rem; font-weight:700; margin:0 0 4px 0;">Select District</h2>
+                <p style="color:#64748b; font-size:0.82rem; margin:0;">Bandung City &mdash; click to focus on a district area</p>
+            </div>
+
+            <!-- Show All Button -->
+            <button onclick="selectKecamatan('__ALL__')" style="width:100%; padding:10px; background:#1E2D4A; color:white; border:none; border-radius:8px; font-size:0.88rem; font-weight:600; cursor:pointer; margin-bottom:18px;">
+                Show All of Bandung City
+            </button>
+
+            <!-- Divider -->
+            <div style="display:flex; align-items:center; gap:10px; margin-bottom:14px;">
+                <div style="flex:1; height:1px; background:#e2e8f0;"></div>
+                <span style="color:#94a3b8; font-size:0.75rem; white-space:nowrap;">or select a district</span>
+                <div style="flex:1; height:1px; background:#e2e8f0;"></div>
+            </div>
+
+            <!-- Kecamatan Grid -->
+            <div id="kecamatan-grid" style="display:grid; grid-template-columns:repeat(3,1fr); gap:7px;"></div>
+        </div>
+    </div>
+
+    <!-- Label Kecamatan Aktif -->
+    <div id="kecamatan-label" style="display:none; position:absolute; top:60px; left:50%; transform:translateX(-50%); z-index:2000; background:rgba(10,25,47,0.88); border:1px solid rgba(255,255,255,0.15); border-radius:20px; padding:5px 16px; color:#ffffff; font-size:0.78rem; font-weight:500; backdrop-filter:blur(8px); pointer-events:none;"></div>
+
+    
+    <!-- Fullscreen Map -->
+    <div id="map" style="top: 0; height: 100vh;"></div>
+    <div id="cesiumContainer" style="display: none; top: 0; height: 100vh;"></div>
+    
+    <!-- Top Floating Toolbar (Left) -->
+    <div id="floating-toolbar-left" style="position: absolute; top: 15px; left: 320px; z-index: 1000; display: flex; gap: 8px; transition: left 0.3s ease;">
+        <!-- RAKIT text and Home (only shown when UI hidden) -->
+        <div id="btn-rakit-text" style="display: none; height: 38px; padding: 0 16px; background: #0a192f; color: white; border-radius: 6px; font-weight: 800; font-size: 1rem; letter-spacing: 1px; box-shadow: 0 2px 4px rgba(0,0,0,0.3); align-items: center; justify-content: center;">RAKIT</div>
+
+        <!-- 3D Toggle Button -->
+        <button id="btn-toggle-3d" onclick="toggle3DMode()" data-tooltip="View in 3D" style="width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; background: #3b82f6; color: white; border: none; border-radius: 6px; font-size: 1.2rem; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.3); transition: all 0.2s;"><i class="ph ph-cube"></i></button>
+        
+        <!-- Toggle UI Button -->
+        <button id="btn-toggle-ui" onclick="toggleUI()" data-tooltip="Toggle UI" style="width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; background: #64748b; color: white; border: none; border-radius: 6px; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.3); transition: all 0.2s;">
+            <svg id="icon-toggle-ui" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line><polyline points="15 16 11 12 15 8"></polyline></svg>
+        </button>
+        
+        <button id="btn-shelter-eval" onclick="toggleShelterEvalMode()" data-tooltip="Shelter Evaluation" style="display:none; width: 38px; height: 38px; align-items: center; justify-content: center; background: #16a34a; color: white; border: none; border-radius: 6px; font-size: 1.2rem; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.3); transition: all 0.2s;"><i class="ph ph-house"></i></button>
+        <button id="btn-well-recommend" onclick="toggleWellMode()" data-tooltip="Retention Wells" style="display:none; width: 38px; height: 38px; align-items: center; justify-content: center; background: #0369a1; color: white; border: none; border-radius: 6px; font-size: 1.2rem; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.3); transition: all 0.2s;"><i class="ph ph-drop"></i></button>
+    </div>
+
+    <!-- Floating Left Sidebar -->
+    <div class="sidebar-left">
+        <div class="sidebar-header">
+            <span style="color: white; font-weight: 800; letter-spacing: 1px; font-size: 1.4rem;">RAKIT</span>
+            <span class="subtitle" style="line-height: 1.4; color: #fbbf24;">Flood Simulation and <br> Adaptive Evacuation</span>
+        </div>
+
+        <div class="accordion">
+            <!-- Real-Time Weather Widget -->
+            <div class="accordion-item">
+                <button class="accordion-header"><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 190px;" title="🌦️ Live Weather (Bandung)">🌦️ Live Weather (Bandung)</span> <div style="display: flex; align-items: center; gap: 10px; flex-shrink: 0;"><i class="ph ph-info info-icon" style="font-size: 1.2rem; cursor: pointer;"></i><i class="ph ph-caret-down arrow" style="font-size: 1.1rem; color: #94a3b8;"></i></div></button>
+                <div class="accordion-content">
+                    <div id="weather-widget" style="text-align: center; padding: 5px 0;">
+                        <p style="color: #64748b; font-size: 12px;">Loading weather data...</p>
+                    </div>
+                    <button class="btn-yellow" id="btn-use-live-rain" onclick="useLiveRainfall()" style="width: 100%; margin-top: 8px; display: none;">
+                        ⬇ Use Live Rainfall Data
+                    </button>
+                    <button class="btn-sm" onclick="fetchLiveWeather()" style="width: 100%; margin-top: 5px; background: #1E2D4A; font-size: 11px;">
+                        🔄 Refresh
+                    </button>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header"><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 190px;" title="DEM Input">DEM Input</span> <div style="display: flex; align-items: center; gap: 10px; flex-shrink: 0;"><i class="ph ph-info info-icon" style="font-size: 1.2rem; cursor: pointer;"></i><i class="ph ph-caret-down arrow" style="font-size: 1.1rem; color: #94a3b8;"></i></div></button>
+                <div class="accordion-content">
+                    <div class="form-group">
+                        <label>DEM / DTM Data (GeoTIFF/JSON)</label>
+                        <input type="file" id="dem-file" accept=".tif,.json,.geojson" style="font-size:12px; margin-bottom: 5px;">
+                        <button class="btn-yellow" onclick="uploadDEM()">Load DEM</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <button class="accordion-header"><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 190px;" title="Hydrology Data">Hydrology Data</span> <div style="display: flex; align-items: center; gap: 10px; flex-shrink: 0;"><i class="ph ph-info info-icon" style="font-size: 1.2rem; cursor: pointer;"></i><i class="ph ph-caret-down arrow" style="font-size: 1.1rem; color: #94a3b8;"></i></div></button>
+                <div class="accordion-content">
+                    <div class="form-group">
+                        <label>Rainfall Data (CSV)</label>
+                        <input type="file" id="rainfall-file" accept=".csv" style="font-size:12px; margin-bottom: 5px;">
+                        <button class="btn-yellow" onclick="uploadRainfall()">Load Rainfall Data</button>
+                    </div>
+                    <hr style="border: 0; border-top: 1px solid #444; margin: 10px 0;">
+                    <div class="form-group">
+                        <label>Rainfall (P) mm:</label>
+                        <input type="number" id="input-rainfall" value="150" step="10" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label>Curve Number (CN):</label>
+                        <input type="text" id="input-cn" value="Auto (Spatial LULC)" disabled title="CN values are now automatically generated per-pixel using the loaded Landuse GeoJSON map.">
+                    </div>
+                    <button class="btn-primary" id="run-hydro-btn" onclick="runRunoffSimulation()" disabled style="opacity: 0.5;">Run Hydrology</button>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <button class="accordion-header"><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 190px;" title="Custom Data Layers">Custom Data Layers</span> <div style="display: flex; align-items: center; gap: 10px; flex-shrink: 0;"><i class="ph ph-info info-icon" style="font-size: 1.2rem; cursor: pointer;"></i><i class="ph ph-caret-down arrow" style="font-size: 1.1rem; color: #94a3b8;"></i></div></button>
+                <div class="accordion-content">
+                    <p style="margin-bottom: 5px; font-size: 13px;">Raster Data (GeoTIFF)</p>
+                    <label class="checkbox-label"><input type="checkbox" onchange="toggleCustomLayer('gfidas', this.checked)"> GFIDAS Simulasi</label>
+                    
+                    <p style="margin-bottom: 5px; margin-top: 10px; font-size: 13px;">Vector Data (Shapefile/GeoJSON)</p>
+                    <label class="checkbox-label"><input type="checkbox" onchange="toggleCustomLayer('lulc', this.checked)"> LULC Bandung</label>
+                    <label class="checkbox-label"><input type="checkbox" onchange="toggleCustomLayer('batas', this.checked)"> District Boundaries</label>
+                    <label class="checkbox-label"><input type="checkbox" onchange="toggleCustomLayer('sungai', this.checked)"> Bandung City Rivers</label>
+                    <label class="checkbox-label"><input type="checkbox" onchange="toggleCustomLayer('potensi', this.checked)"> Flood Potential</label>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header"><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 190px;" title="3D Environment">3D Environment</span> <div style="display: flex; align-items: center; gap: 10px; flex-shrink: 0;"><i class="ph ph-info info-icon" style="font-size: 1.2rem; cursor: pointer;"></i><i class="ph ph-caret-down arrow" style="font-size: 1.1rem; color: #94a3b8;"></i></div></button>
+                <div class="accordion-content">
+                    <p style="margin-bottom: 5px; font-size: 13px;">Sunlight / Time of Day:</p>
+                    <input type="range" id="sunlight-slider" min="0" max="24" step="0.5" value="12" oninput="updateSunlight(this.value)" style="width: 100%; margin-bottom: 5px;">
+                    <p id="sunlight-label" style="font-size: 11px; text-align: center; color: #94a3b8; margin-bottom: 10px;">12:00</p>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <button class="accordion-header"><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 190px;" title="Data Analytics">Data Analytics</span> <div style="display: flex; align-items: center; gap: 10px; flex-shrink: 0;"><i class="ph ph-info info-icon" style="font-size: 1.2rem; cursor: pointer;"></i><i class="ph ph-caret-down arrow" style="font-size: 1.1rem; color: #94a3b8;"></i></div></button>
+                <div class="accordion-content">
+                    <p style="margin-bottom: 10px; font-size: 13px;">View detailed SCS-CN charts and damage assessments.</p>
+                    <a href="analytics.html" target="_blank" class="btn-primary" style="display: block; text-align: center; text-decoration: none;">Open Analytics Dashboard</a>
+                    <div class="terminal-box" id="terminal-box" style="margin-top: 15px;">
+                        <div class="log-line">> System Ready</div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header"><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 190px;" title="Flood Risk & Simulation">Flood Risk & Simulation</span> <div style="display: flex; align-items: center; gap: 10px; flex-shrink: 0;"><i class="ph ph-info info-icon" style="font-size: 1.2rem; cursor: pointer;"></i><i class="ph ph-caret-down arrow" style="font-size: 1.1rem; color: #94a3b8;"></i></div></button>
+                <div class="accordion-content">
+                    <p style="margin-top: 5px; font-size: 13px;">River: Citarum River<br>Gauge ID: 05464000<br>Flood Level: <span id="val-runoff">4815.22</span> mm</p>
+                    <select id="flood-risk-select" onchange="generateFloodGrid()" style="width: 100%; margin-top: 10px; margin-bottom: 5px; font-size: 13px; padding: 5px;">
+                        <option value="none">None</option>
+                        <option value="10yr">10-Year Flood</option>
+                        <option value="20yr">20-Year Flood</option>
+                        <option value="50yr">50-Year Flood</option>
+                        <option value="100yr">100-Year Flood</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header"><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 190px;" title="Evacuation Routing">Evacuation Routing</span> <div style="display: flex; align-items: center; gap: 10px; flex-shrink: 0;"><i class="ph ph-info info-icon" style="font-size: 1.2rem; cursor: pointer;"></i><i class="ph ph-caret-down arrow" style="font-size: 1.1rem; color: #94a3b8;"></i></div></button>
+                <div class="accordion-content">
+                    <p style="margin-bottom: 5px; font-size: 13px;">Safety Threshold (Max Depth):</p>
+                    <label class="radio-label"><input type="radio" name="threshold" value="0.3"> Strict (&lt; 0.3m - Light Vehicle)</label>
+                    <label class="radio-label"><input type="radio" name="threshold" value="0.5" checked> Standard (&lt; 0.5m - Pedestrian/SUV)</label>
+                    <label class="radio-label"><input type="radio" name="threshold" value="1.0"> Emergency (&lt; 1.0m - Heavy Truck)</label>
+                    
+                    <p style="margin-top: 10px; margin-bottom: 5px; font-size: 13px;">Routing Mode:</p>
+                    <label class="radio-label"><input type="radio" name="priority" value="safe" checked> Adaptive Flood-Aware</label>
+                    <label class="radio-label"><input type="radio" name="priority" value="distance"> Shortest Distance (Ignore Flood)</label>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header"><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 190px;" title="ML Flood Prediction">ML Flood Prediction</span> <div style="display: flex; align-items: center; gap: 10px; flex-shrink: 0;"><i class="ph ph-info info-icon" style="font-size: 1.2rem; cursor: pointer;"></i><i class="ph ph-caret-down arrow" style="font-size: 1.1rem; color: #94a3b8;"></i></div></button>
+                <div class="accordion-content">
+                    <div id="ml-status-indicator" style="padding: 5px 8px; border-radius: 3px; font-size: 11px; margin-bottom: 8px; background: #1e293b; color: #94a3b8;">
+                        ⏳ ML Service: Not connected
+                    </div>
+                    <div class="form-group">
+                        <label>Rainfall (mm/day):</label>
+                        <input type="number" id="ml-rainfall" value="80" step="5" min="0" max="300">
+                    </div>
+                    <div class="form-group">
+                        <label>3-Day Avg Rain (mm):</label>
+                        <input type="number" id="ml-rain3day" value="50" step="5" min="0">
+                    </div>
+                    <div class="form-group">
+                        <label>7-Day Avg Rain (mm):</label>
+                        <input type="number" id="ml-rain7day" value="30" step="5" min="0">
+                    </div>
+                    <div class="form-group">
+                        <label>Season:</label>
+                        <select id="ml-season">
+                            <option value="1">Wet Season (Oct-Mar)</option>
+                            <option value="0">Dry Season (Apr-Sep)</option>
+                        </select>
+                    </div>
+                    <button class="btn-primary" onclick="runMLPrediction()" style="background: #3b82f6; width: 100%;">
+                        Predict Flood Risk
+                    </button>
+                    <div id="ml-result" style="display:none; margin-top: 10px; padding: 10px; border-radius: 4px; text-align: center;">
+                        <div id="ml-risk-level" style="font-size: 18px; font-weight: bold;"></div>
+                        <div id="ml-depth" style="font-size: 13px; margin-top: 4px;"></div>
+                        <div id="ml-advice" style="font-size: 12px; margin-top: 6px; color: #94a3b8;"></div>
+                    </div>
+                    <hr style="border: 0; border-top: 1px solid #1E2D4A; margin: 10px 0;">
+                    <button class="btn-primary" onclick="loadRealRoads()" style="background: #0ea5e9; width: 100%; font-size: 12px;">
+                        🛣️ Load Real Road Network
+                    </button>
+                    <div id="road-status" style="font-size: 11px; color: #94a3b8; margin-top: 5px;"></div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header"><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 190px;" title="Damage Summary">Damage Summary</span> <div style="display: flex; align-items: center; gap: 10px; flex-shrink: 0;"><i class="ph ph-info info-icon" style="font-size: 1.2rem; cursor: pointer;"></i><i class="ph ph-caret-down arrow" style="font-size: 1.1rem; color: #94a3b8;"></i></div></button>
+                <div class="accordion-content">
+                    <label class="checkbox-label"><input type="checkbox" checked> Show flood damage</label>
+                    <div class="damage-stats">
+                        <p>Properties with Damage: <span id="dmg-prop">0</span></p>
+                        <p>Total Structural Damage: $<span id="dmg-struct">0</span></p>
+                        <p>Total Content Damage: $<span id="dmg-content">0</span></p>
+                        <p>Total Area Inundated: <span id="val-area">0</span> Ha</p>
+                    </div>
+                    <button class="btn-primary" id="btn-download-png" onclick="downloadOverlayPNG()" style="margin-top: 10px; display: none;">Download PNG Overlay</button>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <button class="accordion-header"><span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 190px;" title="Public Shelters">Public Shelters</span> <div style="display: flex; align-items: center; gap: 10px; flex-shrink: 0;"><i class="ph ph-info info-icon" style="font-size: 1.2rem; cursor: pointer;"></i><i class="ph ph-caret-down arrow" style="font-size: 1.1rem; color: #94a3b8;"></i></div></button>
+                <div class="accordion-content">
+                    <div id="shelter-list" class="shelter-list-small"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Right Control Panel removed to combine with left sidebar -->
+    <!-- Scripts -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.9.0/proj4.js"></script>
+    <script src="https://unpkg.com/shpjs@latest/dist/shp.js"></script>
+    <script src="https://unpkg.com/georaster"></script>
+    <script src="https://unpkg.com/georaster-layer-for-leaflet"></script>
+    <link href="https://cesium.com/downloads/cesiumjs/releases/1.116/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+    <script src="https://cesium.com/downloads/cesiumjs/releases/1.116/Build/Cesium/Cesium.js"></script>
+    <script src="app.js"></script>
+    
+    <!-- 3D Metadata Popup -->
+    <div id="metadata-popup" style="display:none; position:absolute; background:rgba(10, 25, 47, 0.95); color:white; padding:15px; border:1px solid #1E2D4A; border-radius:4px; z-index:2000; pointer-events:none; font-size:12px; box-shadow:0 4px 12px rgba(0,0,0,0.4); max-width: 300px; max-height: 400px; overflow-y: auto;">
+        <h4 style="margin-bottom:8px; color:#facc15; border-bottom:1px solid #1E2D4A; padding-bottom:4px;">Building Metadata</h4>
+        <div id="metadata-content"></div>
+    </div>
+
+    <!-- Global Info Tooltip -->
+    <div id="global-info-tooltip" class="info-popup" style="display: none;"></div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tooltip = document.getElementById('global-info-tooltip');
+            let activeIcon = null;
+
+            const descriptions = {
+              '🌦️ Live Weather (Bandung)': 'Menampilkan data cuaca langsung dari OpenWeatherMap untuk kota Bandung.',
+              'DEM Input': 'Input data Digital Elevation Model (DEM) / Digital Terrain Model (DTM) dalam format GeoTIFF atau JSON untuk mendefinisikan elevasi permukaan tanah.',
+              'Hydrology Data': 'Rainfall Data (CSV) adalah data curah hujan yang diunggah dalam format CSV, digunakan sebagai parameter hidrologi untuk menghitung limpasan permukaan (runoff) dan simulasi genangan banjir.<br><br>Curah Hujan (P) adalah nilai presipitasi atau curah hujan total dalam satuan milimeter (mm). Contoh: P = 50 mm, 100 mm.<br><br>Curve Number (CN) adalah angka yang menunjukkan seberapa besar suatu wilayah menghasilkan limpasan air.',
+              'Custom Data Layers': 'Memuat layer data kustom (GeoTIFF/GeoJSON) seperti data tata guna lahan (LULC), jaringan sungai, atau bangunan untuk memperkaya analisis.',
+              'Analysis & Visualization': 'Menampilkan chart SCS-CN dan ringkasan nilai hidrologi. Mode 3D mensimulasikan banjir berdasarkan elevasi.',
+              'Flood Risk & Simulation': 'Mensimulasikan kedalaman banjir berdasarkan probabilitas curah hujan periode ulang (10, 20, 50, 100 tahun).',
+              'Evacuation Routing': 'Mencari rute evakuasi teraman menuju tempat penampungan (shelter) dengan mempertimbangkan kedalaman banjir dan jenis kendaraan/pejalan kaki.',
+              'ML Flood Prediction': 'Prediksi probabilitas banjir menggunakan Machine Learning berdasarkan curah hujan harian rata-rata.',
+              'Damage Summary': 'Ringkasan estimasi kerugian infrastruktur dan properti akibat genangan banjir pada area simulasi.',
+              'Public Shelters': 'Daftar lokasi penampungan evakuasi publik (titik aman) terdekat.'
+            };
+
+            document.querySelectorAll('.accordion-header').forEach(header => {
+                const icon = header.querySelector('.info-icon');
+                if (!icon) return;
+                
+                const titleSpan = header.querySelector('span[title]');
+                if (!titleSpan) return;
+                
+                const title = titleSpan.getAttribute('title');
+                
+                icon.addEventListener('click', (e) => {
+                    e.stopPropagation(); // prevent accordion toggle
+                    
+                    if (activeIcon === icon) {
+                        tooltip.style.display = 'none';
+                        icon.style.color = '';
+                        activeIcon = null;
+                        return;
+                    }
+                    
+                    if (activeIcon) {
+                        activeIcon.style.color = '';
+                    }
+                    
+                    tooltip.innerHTML = descriptions[title] || 'Informasi tidak tersedia.';
+                    tooltip.style.display = 'block';
+                    icon.style.color = '#facc15';
+                    activeIcon = icon;
+                    
+                    const rect = icon.getBoundingClientRect();
+                    tooltip.style.top = Math.max(15, rect.top - 10) + 'px';
+                    tooltip.style.left = (rect.right + 25) + 'px';
+                });
+            });
+
+            document.addEventListener('click', (e) => {
+                if (activeIcon && !tooltip.contains(e.target) && e.target !== activeIcon) {
+                    tooltip.style.display = 'none';
+                    activeIcon.style.color = '';
+                    activeIcon = null;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

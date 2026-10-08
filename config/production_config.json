@@ -1,0 +1,44 @@
+{
+  "_description": "Canonical production configuration behind every result in the IJIES manuscript (Table 17). server.js implements these values; validate_flood.py reads the validation block.",
+  "grid": {
+    "rows": 820,
+    "cols": 853,
+    "bounds_deg": {"west": 107.53, "east": 107.66, "south": -6.98, "north": -6.86},
+    "cell_size_m": [16.84, 16.18],
+    "terrain": "data/raster/dtm_bandung_wgs84.bin (DEMNAS-derived DTMUTM.tif, EPSG:32748, cell-averaged by convert_dtm.py)",
+    "curve_number": "data/raster/cn_grid_bandung_wgs84.bin (lulckotabandung24.tif, cell-centre class, convert_cn.py)"
+  },
+  "hydrodynamics": {
+    "scheme": "explicit 2D diffusion wave, D8 stencil",
+    "dt_s": 5.0,
+    "n_steps_rule": "floor(100 + min(P/100, 4) * 30)",
+    "n_steps_at_P137": 141,
+    "early_exit_depth_m": 0.05,
+    "stability_alpha": 0.5,
+    "manning_n_by_cn": {"cn>=95 (water)": 0.030, "cn>=85 (settlement/paved)": 0.015, "cn>=80 (paddy)": 0.035, "cn>=75 (bare land)": 0.045, "cn>=70 (garden/mixed)": 0.080, "cn<70 (forest)": 0.100},
+    "river_inflow": "Citarum and Cikapundung centrelines; coefficient 0.0003 + 0.0004*min(P/100,4); first 0.5 + 0.1*min(P/100,4) of the steps"
+  },
+  "routing": {
+    "graph": "data/roads/bandung_roads_real.geojson -> 49,921 nodes, 110,268 directed edges",
+    "edge_depth": "maximum simulated depth along the full edge geometry",
+    "penalty": [{"max_depth_m": 0.05, "factor": 1}, {"max_depth_m": 0.20, "factor": 2}, {"max_depth_m": 0.50, "factor": 10}, {"above_m": 0.50, "factor": "removed"}]
+  },
+  "validation": {
+    "rainfall_mm": 137,
+    "depth_threshold_m": 0.1,
+    "reference": "data/validation/PotensiBanjirBandung (1).tif (EPSG:32748)",
+    "archived_output": "data/validation/results.json"
+  },
+  "machine_learning": {
+    "model": "GradientBoostingRegressor",
+    "n_estimators": 300,
+    "max_depth": 5,
+    "learning_rate": 0.05,
+    "subsample": 0.8,
+    "random_state": 42,
+    "test_size": 0.2,
+    "training_script": "ml/train_real_data.py",
+    "weights": "ml/models/flood_predictor.pkl, ml/models/scaler.pkl"
+  },
+  "controlled_routing_evaluation": "experiments/synthetic_routing_eval.js (design fixed in its CFG block; results in experiments/results/)"
+}

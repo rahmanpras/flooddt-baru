@@ -1,0 +1,45 @@
+{
+  "shelter": {
+    "name": "Lapangan Gasibu",
+    "lat": -6.8975,
+    "lng": 107.6185
+  },
+  "simulation": {
+    "P": 137,
+    "steps": 141,
+    "floodedCells": 66150,
+    "maxDepth": 8.35
+  },
+  "results": [
+    {
+      "origin": "Dago (elevated, northern Bandung)",
+      "lat": -6.865,
+      "lng": 107.617,
+      "query_ms": 45,
+      "result": "no route",
+      "diagnostic": "FLOOD_ISOLATION"
+    },
+    {
+      "origin": "Near the Citarum floodplain (southern Bandung)",
+      "lat": -6.96,
+      "lng": 107.6,
+      "query_ms": 2000,
+      "type": "EvacuationRoute",
+      "lengthKm": 10.85,
+      "weightedCost": 19.65,
+      "maxRouteDepth": 0.42,
+      "result": "route"
+    },
+    {
+      "origin": "Cicendo (city center)",
+      "lat": -6.91,
+      "lng": 107.595,
+      "query_ms": 906,
+      "type": "EvacuationRoute",
+      "lengthKm": 4.06,
+      "weightedCost": 7.55,
+      "maxRouteDepth": 0.38,
+      "result": "route"
+    }
+  ]
+}

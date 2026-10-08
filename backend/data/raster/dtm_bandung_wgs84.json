@@ -1,0 +1,22 @@
+{
+  "rows": 820,
+  "cols": 853,
+  "bounds": {
+    "west": 107.53,
+    "east": 107.66,
+    "south": -6.98,
+    "north": -6.86
+  },
+  "dx": 0.0001524032825322338,
+  "dy": 0.00014634146341463428,
+  "dx_m": 16.842686709735183,
+  "dy_m": 16.183960401042565,
+  "elevation_min": 660.8770141601562,
+  "elevation_max": 927.0887451171875,
+  "elevation_mean": 717.1932373046875,
+  "source": "DTMUTM.tif",
+  "target_crs": "EPSG:4326",
+  "dtype": "float32",
+  "resampling": "average; cells outside DTM coverage filled with nearest valid value",
+  "dtm_coverage_fraction": 0.5608569467875218
+}

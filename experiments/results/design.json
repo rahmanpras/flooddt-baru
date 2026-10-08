@@ -1,0 +1,1132 @@
+{
+ "cfg": {
+  "sampleSpacingM": 7.5,
+  "evalDepth": 0.3,
+  "sensitivityEvalDepths": [
+   0.2,
+   0.8
+  ],
+  "nOrigins": 40,
+  "minOriginShelterDistM": 500,
+  "timingReps": 1,
+  "s1": {
+   "nZones": 8,
+   "innerR": 120,
+   "outerR": 200,
+   "minSepM": 800,
+   "shelterBufferM": 400,
+   "originBufferM": 300,
+   "depthInner": 0.3,
+   "depthOuter": 0.1
+  },
+  "s2": {
+   "depthInner": 0.6,
+   "depthOuter": 0.3
+  },
+  "s3": {
+   "radiusM": 300,
+   "depth": 0.6
+  },
+  "s4": {
+   "nIsolated": 6,
+   "innerR": 120,
+   "outerR": 320,
+   "depth": 0.6
+  },
+  "sensitivityDepth": 0.9,
+  "an": {
+   "v0": 1.6,
+   "eta": 0.9
+  }
+ },
+ "raster": {
+  "rows": 820,
+  "cols": 853,
+  "bounds": {
+   "west": 107.53,
+   "east": 107.66,
+   "south": -6.98,
+   "north": -6.86
+  },
+  "mapping": "server.js getFloodDepthAt (bounds-proportional)"
+ },
+ "graph": {
+  "nodes": 49921,
+  "directedEdges": 110268,
+  "domainDirectedEdges": 76846,
+  "droppedNoDataSegments": 16711,
+  "components": 71,
+  "mainComponentNodes": 33536,
+  "domainNodes": 34906
+ },
+ "shelters": [
+  {
+   "id": 1,
+   "name": "Stadion GBLA (Gedebage)",
+   "lat": -6.957,
+   "lng": 107.712,
+   "eligible": false,
+   "node": -1,
+   "snapM": null
+  },
+  {
+   "id": 2,
+   "name": "SOR Arcamanik",
+   "lat": -6.915,
+   "lng": 107.671,
+   "eligible": false,
+   "node": -1,
+   "snapM": null
+  },
+  {
+   "id": 3,
+   "name": "Kantor Kecamatan Buahbatu (Kordon)",
+   "lat": -6.941,
+   "lng": 107.658,
+   "eligible": true,
+   "node": 46157,
+   "snapM": 86.3227879036639
+  },
+  {
+   "id": 4,
+   "name": "SMAN 15 Bandung (Bojonagara)",
+   "lat": -6.894,
+   "lng": 107.596,
+   "eligible": true,
+   "node": 44209,
+   "snapM": 121.0305082749612
+  },
+  {
+   "id": 5,
+   "name": "SMKN 3 Bandung (Karees)",
+   "lat": -6.924,
+   "lng": 107.636,
+   "eligible": true,
+   "node": 10208,
+   "snapM": 9.447985889577525
+  },
+  {
+   "id": 6,
+   "name": "UIN Sunan Gunung Djati (Ujungberung)",
+   "lat": -6.93,
+   "lng": 107.718,
+   "eligible": false,
+   "node": -1,
+   "snapM": null
+  },
+  {
+   "id": 7,
+   "name": "Monumen BLA (Tegalega)",
+   "lat": -6.936,
+   "lng": 107.603,
+   "eligible": true,
+   "node": 38239,
+   "snapM": 18.630530715505852
+  },
+  {
+   "id": 8,
+   "name": "Pusdai (Cibeunying)",
+   "lat": -6.901,
+   "lng": 107.622,
+   "eligible": true,
+   "node": 12389,
+   "snapM": 27.250017995480224
+  },
+  {
+   "id": 9,
+   "name": "ITB Sabuga (SWK)",
+   "lat": -6.8863,
+   "lng": 107.6087,
+   "eligible": true,
+   "node": 47141,
+   "snapM": 29.814610489727347
+  }
+ ],
+ "origins": [
+  {
+   "id": 1,
+   "node": 25693,
+   "lat": -6.868120323999925,
+   "lng": 107.62137154900006,
+   "cell": "6x9:r0c6"
+  },
+  {
+   "id": 2,
+   "node": 36482,
+   "lat": -6.869732664999926,
+   "lng": 107.58071660500005,
+   "cell": "6x9:r0c3"
+  },
+  {
+   "id": 3,
+   "node": 2235,
+   "lat": -6.870271427,
+   "lng": 107.60934407300002,
+   "cell": "6x9:r0c5"
+  },
+  {
+   "id": 4,
+   "node": 49427,
+   "lat": -6.8704354569999,
+   "lng": 107.59349410700007,
+   "cell": "6x9:r0c4"
+  },
+  {
+   "id": 5,
+   "node": 37535,
+   "lat": -6.877304614,
+   "lng": 107.573108548,
+   "cell": "6x9:r0c2"
+  },
+  {
+   "id": 6,
+   "node": 48660,
+   "lat": -6.888415073000019,
+   "lng": 107.5941234490001,
+   "cell": "6x9:r1c4"
+  },
+  {
+   "id": 7,
+   "node": 549,
+   "lat": -6.889393439999967,
+   "lng": 107.63625624200007,
+   "cell": "6x9:r1c7"
+  },
+  {
+   "id": 8,
+   "node": 16443,
+   "lat": -6.890118286999989,
+   "lng": 107.58071885300006,
+   "cell": "6x9:r1c3"
+  },
+  {
+   "id": 9,
+   "node": 27283,
+   "lat": -6.890171999,
+   "lng": 107.62398841300005,
+   "cell": "6x9:r1c6"
+  },
+  {
+   "id": 10,
+   "node": 54,
+   "lat": -6.891076729999977,
+   "lng": 107.60930166400006,
+   "cell": "6x9:r1c5"
+  },
+  {
+   "id": 11,
+   "node": 2685,
+   "lat": -6.892320433999942,
+   "lng": 107.55798327800008,
+   "cell": "6x9:r1c1"
+  },
+  {
+   "id": 12,
+   "node": 946,
+   "lat": -6.894298244999984,
+   "lng": 107.65267733900004,
+   "cell": "6x9:r1c8"
+  },
+  {
+   "id": 13,
+   "node": 44590,
+   "lat": -6.907919665932869,
+   "lng": 107.56751144695461,
+   "cell": "6x9:r2c2"
+  },
+  {
+   "id": 14,
+   "node": 12628,
+   "lat": -6.909791707999922,
+   "lng": 107.5949565330001,
+   "cell": "6x9:r2c4"
+  },
+  {
+   "id": 15,
+   "node": 12213,
+   "lat": -6.909850804000016,
+   "lng": 107.57982943500011,
+   "cell": "6x9:r2c3"
+  },
+  {
+   "id": 16,
+   "node": 2261,
+   "lat": -6.909854113999934,
+   "lng": 107.62370940500006,
+   "cell": "6x9:r2c6"
+  },
+  {
+   "id": 17,
+   "node": 19795,
+   "lat": -6.910014768999904,
+   "lng": 107.65303244800002,
+   "cell": "6x9:r2c8"
+  },
+  {
+   "id": 18,
+   "node": 34796,
+   "lat": -6.910049543999939,
+   "lng": 107.63771324500001,
+   "cell": "6x9:r2c7"
+  },
+  {
+   "id": 19,
+   "node": 1694,
+   "lat": -6.910282936999977,
+   "lng": 107.60936417100008,
+   "cell": "6x9:r2c5"
+  },
+  {
+   "id": 20,
+   "node": 35889,
+   "lat": -6.922675067999904,
+   "lng": 107.5443475640001,
+   "cell": "6x9:r3c0"
+  },
+  {
+   "id": 21,
+   "node": 31590,
+   "lat": -6.929390737999917,
+   "lng": 107.60947915500009,
+   "cell": "6x9:r3c5"
+  },
+  {
+   "id": 22,
+   "node": 21374,
+   "lat": -6.929457200999909,
+   "lng": 107.59453646200008,
+   "cell": "6x9:r3c4"
+  },
+  {
+   "id": 23,
+   "node": 31087,
+   "lat": -6.929763887999972,
+   "lng": 107.56623065700008,
+   "cell": "6x9:r3c2"
+  },
+  {
+   "id": 24,
+   "node": 7256,
+   "lat": -6.930056395999927,
+   "lng": 107.58049024800006,
+   "cell": "6x9:r3c3"
+  },
+  {
+   "id": 25,
+   "node": 18209,
+   "lat": -6.930152315999958,
+   "lng": 107.6238763200001,
+   "cell": "6x9:r3c6"
+  },
+  {
+   "id": 26,
+   "node": 45319,
+   "lat": -6.93042536,
+   "lng": 107.63883794100008,
+   "cell": "6x9:r3c7"
+  },
+  {
+   "id": 27,
+   "node": 39384,
+   "lat": -6.930814682999962,
+   "lng": 107.65258556500008,
+   "cell": "6x9:r3c8"
+  },
+  {
+   "id": 28,
+   "node": 41179,
+   "lat": -6.949458400999962,
+   "lng": 107.62445296100012,
+   "cell": "6x9:r4c6"
+  },
+  {
+   "id": 29,
+   "node": 5472,
+   "lat": -6.949752045000011,
+   "lng": 107.56536557200009,
+   "cell": "6x9:r4c2"
+  },
+  {
+   "id": 30,
+   "node": 30179,
+   "lat": -6.949878262999974,
+   "lng": 107.63813167100008,
+   "cell": "6x9:r4c7"
+  },
+  {
+   "id": 31,
+   "node": 41875,
+   "lat": -6.950012598999898,
+   "lng": 107.58178009700003,
+   "cell": "6x9:r4c3"
+  },
+  {
+   "id": 32,
+   "node": 43725,
+   "lat": -6.950049216,
+   "lng": 107.65261852300004,
+   "cell": "6x9:r4c8"
+  },
+  {
+   "id": 33,
+   "node": 23940,
+   "lat": -6.950054907999935,
+   "lng": 107.5950231020001,
+   "cell": "6x9:r4c4"
+  },
+  {
+   "id": 34,
+   "node": 24266,
+   "lat": -6.950058516999967,
+   "lng": 107.60978532200002,
+   "cell": "6x9:r4c5"
+  },
+  {
+   "id": 35,
+   "node": 2496,
+   "lat": -6.96135186599993,
+   "lng": 107.60809070200006,
+   "cell": "6x9:r5c5"
+  },
+  {
+   "id": 36,
+   "node": 3532,
+   "lat": -6.961928963999984,
+   "lng": 107.58300223900008,
+   "cell": "6x9:r5c3"
+  },
+  {
+   "id": 37,
+   "node": 10542,
+   "lat": -6.962726563181352,
+   "lng": 107.59347329502917,
+   "cell": "6x9:r5c4"
+  },
+  {
+   "id": 38,
+   "node": 39314,
+   "lat": -6.963907856999938,
+   "lng": 107.62618503400007,
+   "cell": "6x9:r5c6"
+  },
+  {
+   "id": 39,
+   "node": 7515,
+   "lat": -6.965274125999919,
+   "lng": 107.65527459900008,
+   "cell": "6x9:r5c8"
+  },
+  {
+   "id": 40,
+   "node": 47801,
+   "lat": -6.965735059706589,
+   "lng": 107.63785067900268,
+   "cell": "6x9:r5c7"
+  }
+ ],
+ "originGrid": "9x6 (farthest-point subset)",
+ "s3Shelter": 7,
+ "isolatedOrigins": [
+  3,
+  10,
+  17,
+  23,
+  30,
+  37
+ ],
+ "scenarios": [
+  {
+   "id": "S0",
+   "name": "No inundation",
+   "sensitivity": false,
+   "wetCells": 0,
+   "zones": []
+  },
+  {
+   "id": "S1",
+   "name": "Corridor inundation (passable)",
+   "sensitivity": false,
+   "wetCells": 3686,
+   "zones": [
+    {
+     "id": "C1",
+     "lat": -6.937483099499973,
+     "lng": 107.59958815000002,
+     "bands": [
+      {
+       "from": -1,
+       "to": 120,
+       "depth": 0.3
+      },
+      {
+       "from": 120,
+       "to": 200,
+       "depth": 0.1
+      }
+     ],
+     "outerR": 200,
+     "note": "corridor on S0 edge used by 8 of 40 baseline routes"
+    },
+    {
+     "id": "C2",
+     "lat": -6.941808749499943,
+     "lng": 107.65313784950007,
+     "bands": [
+      {
+       "from": -1,
+       "to": 120,
+       "depth": 0.3
+      },
+      {
+       "from": 120,
+       "to": 200,
+       "depth": 0.1
+      }
+     ],
+     "outerR": 200,
+     "note": "corridor on S0 edge used by 5 of 40 baseline routes"
+    },
+    {
+     "id": "C3",
+     "lat": -6.943048611499945,
+     "lng": 107.60756833950009,
+     "bands": [
+      {
+       "from": -1,
+       "to": 120,
+       "depth": 0.3
+      },
+      {
+       "from": 120,
+       "to": 200,
+       "depth": 0.1
+      }
+     ],
+     "outerR": 200,
+     "note": "corridor on S0 edge used by 3 of 40 baseline routes"
+    },
+    {
+     "id": "C4",
+     "lat": -6.943938938499937,
+     "lng": 107.5907994135001,
+     "bands": [
+      {
+       "from": -1,
+       "to": 120,
+       "depth": 0.3
+      },
+      {
+       "from": 120,
+       "to": 200,
+       "depth": 0.1
+      }
+     ],
+     "outerR": 200,
+     "note": "corridor on S0 edge used by 3 of 40 baseline routes"
+    },
+    {
+     "id": "C5",
+     "lat": -6.935137044999972,
+     "lng": 107.59208826600005,
+     "bands": [
+      {
+       "from": -1,
+       "to": 120,
+       "depth": 0.3
+      },
+      {
+       "from": 120,
+       "to": 200,
+       "depth": 0.1
+      }
+     ],
+     "outerR": 200,
+     "note": "corridor on S0 edge used by 3 of 40 baseline routes"
+    },
+    {
+     "id": "C6",
+     "lat": -6.899485433499917,
+     "lng": 107.62648308450005,
+     "bands": [
+      {
+       "from": -1,
+       "to": 120,
+       "depth": 0.3
+      },
+      {
+       "from": 120,
+       "to": 200,
+       "depth": 0.1
+      }
+     ],
+     "outerR": 200,
+     "note": "corridor on S0 edge used by 3 of 40 baseline routes"
+    },
+    {
+     "id": "C7",
+     "lat": -6.897881947999894,
+     "lng": 107.63389005600004,
+     "bands": [
+      {
+       "from": -1,
+       "to": 120,
+       "depth": 0.3
+      },
+      {
+       "from": 120,
+       "to": 200,
+       "depth": 0.1
+      }
+     ],
+     "outerR": 200,
+     "note": "corridor on S0 edge used by 3 of 40 baseline routes"
+    },
+    {
+     "id": "C8",
+     "lat": -6.892398979499957,
+     "lng": 107.59236874050009,
+     "bands": [
+      {
+       "from": -1,
+       "to": 120,
+       "depth": 0.3
+      },
+      {
+       "from": 120,
+       "to": 200,
+       "depth": 0.1
+      }
+     ],
+     "outerR": 200,
+     "note": "corridor on S0 edge used by 3 of 40 baseline routes"
+    }
+   ]
+  },
+  {
+   "id": "S2",
+   "name": "Corridors made impassable",
+   "sensitivity": false,
+   "wetCells": 3686,
+   "zones": [
+    {
+     "id": "C1",
+     "lat": -6.937483099499973,
+     "lng": 107.59958815000002,
+     "bands": [
+      {
+       "from": -1,
+       "to": 120,
+       "depth": 0.6
+      },
+      {
+       "from": 120,
+       "to": 200,
+       "depth": 0.3
+      }
+     ],
+     "outerR": 200,
+     "note": "corridor on S0 edge used by 8 of 40 baseline routes"
+    },
+    {
+     "id": "C2",
+     "lat": -6.941808749499943,
+     "lng": 107.65313784950007,
+     "bands": [
+      {
+       "from": -1,
+       "to": 120,
+       "depth": 0.6
+      },
+      {
+       "from": 120,
+       "to": 200,
+       "depth": 0.3
+      }
+     ],
+     "outerR": 200,
+     "note": "corridor on S0 edge used by 5 of 40 baseline routes"
+    },
+    {
+     "id": "C3",
+     "lat": -6.943048611499945,
+     "lng": 107.60756833950009,
+     "bands": [
+      {
+       "from": -1,
+       "to": 120,
+       "depth": 0.6
+      },
+      {
+       "from": 120,
+       "to": 200,
+       "depth": 0.3
+      }
+     ],
+     "outerR": 200,
+     "note": "corridor on S0 edge used by 3 of 40 baseline routes"
+    },
+    {
+     "id": "C4",
+     "lat": -6.943938938499937,
+     "lng": 107.5907994135001,
+     "bands": [
+      {
+       "from": -1,
+       "to": 120,
+       "depth": 0.6
+      },
+      {
+       "from": 120,
+       "to": 200,
+       "depth": 0.3
+      }
+     ],
+     "outerR": 200,
+     "note": "corridor on S0 edge used by 3 of 40 baseline routes"
+    },
+    {
+     "id": "C5",
+     "lat": -6.935137044999972,
+     "lng": 107.59208826600005,
+     "bands": [
+      {
+       "from": -1,
+       "to": 120,
+       "depth": 0.6
+      },
+      {
+       "from": 120,
+       "to": 200,
+       "depth": 0.3
+      }
+     ],
+     "outerR": 200,
+     "note": "corridor on S0 edge used by 3 of 40 baseline routes"
+    },
+    {
+     "id": "C6",
+     "lat": -6.899485433499917,
+     "lng": 107.62648308450005,
+     "bands": [
+      {
+       "from": -1,
+       "to": 120,
+       "depth": 0.6
+      },
+      {
+       "from": 120,
+       "to": 200,
+       "depth": 0.3
+      }
+     ],
+     "outerR": 200,
+     "note": "corridor on S0 edge used by 3 of 40 baseline routes"
+    },
+    {
+     "id": "C7",
+     "lat": -6.897881947999894,
+     "lng": 107.63389005600004,
+     "bands": [
+      {
+       "from": -1,
+       "to": 120,
+       "depth": 0.6
+      },
+      {
+       "from": 120,
+       "to": 200,
+       "depth": 0.3
+      }
+     ],
+     "outerR": 200,
+     "note": "corridor on S0 edge used by 3 of 40 baseline routes"
+    },
+    {
+     "id": "C8",
+     "lat": -6.892398979499957,
+     "lng": 107.59236874050009,
+     "bands": [
+      {
+       "from": -1,
+       "to": 120,
+       "depth": 0.6
+      },
+      {
+       "from": 120,
+       "to": 200,
+       "depth": 0.3
+      }
+     ],
+     "outerR": 200,
+     "note": "corridor on S0 edge used by 3 of 40 baseline routes"
+    }
+   ]
+  },
+  {
+   "id": "S3",
+   "name": "Shelter access cut",
+   "sensitivity": false,
+   "wetCells": 1040,
+   "zones": [
+    {
+     "id": "SH7",
+     "lat": -6.936,
+     "lng": 107.603,
+     "bands": [
+      {
+       "from": -1,
+       "to": 300,
+       "depth": 0.6
+      }
+     ],
+     "outerR": 300,
+     "note": "disk around shelter 7 (Monumen BLA (Tegalega)), most selected in S0"
+    }
+   ]
+  },
+  {
+   "id": "S4",
+   "name": "Controlled isolation",
+   "sensitivity": false,
+   "wetCells": 6079,
+   "zones": [
+    {
+     "id": "R3",
+     "lat": -6.870271427,
+     "lng": 107.60934407300002,
+     "bands": [
+      {
+       "from": 120,
+       "to": 320,
+       "depth": 0.6
+      }
+     ],
+     "outerR": 320,
+     "note": "ring around origin 3"
+    },
+    {
+     "id": "R10",
+     "lat": -6.891076729999977,
+     "lng": 107.60930166400006,
+     "bands": [
+      {
+       "from": 120,
+       "to": 320,
+       "depth": 0.6
+      }
+     ],
+     "outerR": 320,
+     "note": "ring around origin 10"
+    },
+    {
+     "id": "R17",
+     "lat": -6.910014768999904,
+     "lng": 107.65303244800002,
+     "bands": [
+      {
+       "from": 120,
+       "to": 320,
+       "depth": 0.6
+      }
+     ],
+     "outerR": 320,
+     "note": "ring around origin 17"
+    },
+    {
+     "id": "R23",
+     "lat": -6.929763887999972,
+     "lng": 107.56623065700008,
+     "bands": [
+      {
+       "from": 120,
+       "to": 320,
+       "depth": 0.6
+      }
+     ],
+     "outerR": 320,
+     "note": "ring around origin 23"
+    },
+    {
+     "id": "R30",
+     "lat": -6.949878262999974,
+     "lng": 107.63813167100008,
+     "bands": [
+      {
+       "from": 120,
+       "to": 320,
+       "depth": 0.6
+      }
+     ],
+     "outerR": 320,
+     "note": "ring around origin 30"
+    },
+    {
+     "id": "R37",
+     "lat": -6.962726563181352,
+     "lng": 107.59347329502917,
+     "bands": [
+      {
+       "from": 120,
+       "to": 320,
+       "depth": 0.6
+      }
+     ],
+     "outerR": 320,
+     "note": "ring around origin 37"
+    }
+   ]
+  },
+  {
+   "id": "S2b",
+   "name": "S2 with 0.90 m blocking depth (sensitivity)",
+   "sensitivity": true,
+   "wetCells": 3686,
+   "zones": [
+    {
+     "id": "C1",
+     "lat": -6.937483099499973,
+     "lng": 107.59958815000002,
+     "bands": [
+      {
+       "from": -1,
+       "to": 120,
+       "depth": 0.9
+      },
+      {
+       "from": 120,
+       "to": 200,
+       "depth": 0.3
+      }
+     ],
+     "outerR": 200,
+     "note": "corridor on S0 edge used by 8 of 40 baseline routes"
+    },
+    {
+     "id": "C2",
+     "lat": -6.941808749499943,
+     "lng": 107.65313784950007,
+     "bands": [
+      {
+       "from": -1,
+       "to": 120,
+       "depth": 0.9
+      },
+      {
+       "from": 120,
+       "to": 200,
+       "depth": 0.3
+      }
+     ],
+     "outerR": 200,
+     "note": "corridor on S0 edge used by 5 of 40 baseline routes"
+    },
+    {
+     "id": "C3",
+     "lat": -6.943048611499945,
+     "lng": 107.60756833950009,
+     "bands": [
+      {
+       "from": -1,
+       "to": 120,
+       "depth": 0.9
+      },
+      {
+       "from": 120,
+       "to": 200,
+       "depth": 0.3
+      }
+     ],
+     "outerR": 200,
+     "note": "corridor on S0 edge used by 3 of 40 baseline routes"
+    },
+    {
+     "id": "C4",
+     "lat": -6.943938938499937,
+     "lng": 107.5907994135001,
+     "bands": [
+      {
+       "from": -1,
+       "to": 120,
+       "depth": 0.9
+      },
+      {
+       "from": 120,
+       "to": 200,
+       "depth": 0.3
+      }
+     ],
+     "outerR": 200,
+     "note": "corridor on S0 edge used by 3 of 40 baseline routes"
+    },
+    {
+     "id": "C5",
+     "lat": -6.935137044999972,
+     "lng": 107.59208826600005,
+     "bands": [
+      {
+       "from": -1,
+       "to": 120,
+       "depth": 0.9
+      },
+      {
+       "from": 120,
+       "to": 200,
+       "depth": 0.3
+      }
+     ],
+     "outerR": 200,
+     "note": "corridor on S0 edge used by 3 of 40 baseline routes"
+    },
+    {
+     "id": "C6",
+     "lat": -6.899485433499917,
+     "lng": 107.62648308450005,
+     "bands": [
+      {
+       "from": -1,
+       "to": 120,
+       "depth": 0.9
+      },
+      {
+       "from": 120,
+       "to": 200,
+       "depth": 0.3
+      }
+     ],
+     "outerR": 200,
+     "note": "corridor on S0 edge used by 3 of 40 baseline routes"
+    },
+    {
+     "id": "C7",
+     "lat": -6.897881947999894,
+     "lng": 107.63389005600004,
+     "bands": [
+      {
+       "from": -1,
+       "to": 120,
+       "depth": 0.9
+      },
+      {
+       "from": 120,
+       "to": 200,
+       "depth": 0.3
+      }
+     ],
+     "outerR": 200,
+     "note": "corridor on S0 edge used by 3 of 40 baseline routes"
+    },
+    {
+     "id": "C8",
+     "lat": -6.892398979499957,
+     "lng": 107.59236874050009,
+     "bands": [
+      {
+       "from": -1,
+       "to": 120,
+       "depth": 0.9
+      },
+      {
+       "from": 120,
+       "to": 200,
+       "depth": 0.3
+      }
+     ],
+     "outerR": 200,
+     "note": "corridor on S0 edge used by 3 of 40 baseline routes"
+    }
+   ]
+  },
+  {
+   "id": "S4b",
+   "name": "S4 with 0.90 m blocking depth (sensitivity)",
+   "sensitivity": true,
+   "wetCells": 6079,
+   "zones": [
+    {
+     "id": "R3",
+     "lat": -6.870271427,
+     "lng": 107.60934407300002,
+     "bands": [
+      {
+       "from": 120,
+       "to": 320,
+       "depth": 0.9
+      }
+     ],
+     "outerR": 320,
+     "note": "ring around origin 3"
+    },
+    {
+     "id": "R10",
+     "lat": -6.891076729999977,
+     "lng": 107.60930166400006,
+     "bands": [
+      {
+       "from": 120,
+       "to": 320,
+       "depth": 0.9
+      }
+     ],
+     "outerR": 320,
+     "note": "ring around origin 10"
+    },
+    {
+     "id": "R17",
+     "lat": -6.910014768999904,
+     "lng": 107.65303244800002,
+     "bands": [
+      {
+       "from": 120,
+       "to": 320,
+       "depth": 0.9
+      }
+     ],
+     "outerR": 320,
+     "note": "ring around origin 17"
+    },
+    {
+     "id": "R23",
+     "lat": -6.929763887999972,
+     "lng": 107.56623065700008,
+     "bands": [
+      {
+       "from": 120,
+       "to": 320,
+       "depth": 0.9
+      }
+     ],
+     "outerR": 320,
+     "note": "ring around origin 23"
+    },
+    {
+     "id": "R30",
+     "lat": -6.949878262999974,
+     "lng": 107.63813167100008,
+     "bands": [
+      {
+       "from": 120,
+       "to": 320,
+       "depth": 0.9
+      }
+     ],
+     "outerR": 320,
+     "note": "ring around origin 30"
+    },
+    {
+     "id": "R37",
+     "lat": -6.962726563181352,
+     "lng": 107.59347329502917,
+     "bands": [
+      {
+       "from": 120,
+       "to": 320,
+       "depth": 0.9
+      }
+     ],
+     "outerR": 320,
+     "note": "ring around origin 37"
+    }
+   ]
+  }
+ ]
+}

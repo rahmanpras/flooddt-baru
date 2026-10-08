@@ -1,0 +1,459 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+/* Fullscreen Map */
+#map {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - 50px);
+    z-index: 1;
+}
+
+#cesiumContainer {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - 50px);
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* RAKIT Navbar */
+.rakit-navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 50px;
+    background-color: #0A192F;
+    color: white;
+    z-index: 2000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.rakit-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.rakit-nav-links {
+    display: flex;
+    gap: 20px;
+    font-size: 0.9rem;
+}
+
+.rakit-nav-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: color 0.2s;
+    cursor: pointer;
+}
+
+.rakit-nav-links a:hover {
+    color: #fff;
+}
+
+/* Move Cesium toolbar widgets to bottom-right so they don't overlap the right panel */
+.cesium-viewer-toolbar {
+    position: absolute !important;
+    top: auto !important;
+    bottom: 40px !important;
+    right: 10px !important;
+}
+
+.cesium-baseLayerPicker-dropDown {
+    bottom: 40px !important;
+    right: 50px !important;
+    max-height: 60vh !important;
+}
+
+.cesium-viewer-bottom {
+    z-index: 0 !important;
+}
+
+/* Floating Left Sidebar */
+.sidebar-left {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    width: 300px;
+    background-color: rgba(10, 25, 47, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: #ffffff;
+    border: 1px solid #1E2D4A;
+    border-radius: 4px;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: calc(100vh - 80px);
+}
+
+/* Minimalist Scrollbar for Sidebar */
+.sidebar-left::-webkit-scrollbar {
+    width: 6px;
+}
+.sidebar-left::-webkit-scrollbar-track {
+    background: transparent;
+}
+.sidebar-left::-webkit-scrollbar-thumb {
+    background-color: #1E2D4A;
+    border-radius: 10px;
+}
+
+.sidebar-header {
+    padding: 15px 20px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    border-bottom: 1px solid #1E2D4A;
+}
+
+.sidebar-header .subtitle {
+    display: block;
+    font-size: 0.85rem;
+    color: #facc15;
+    font-weight: 400;
+    margin-top: 5px;
+    letter-spacing: 0.5px;
+}
+
+.accordion {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.accordion-item {
+    background: #1c2b42;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    border-left: 3px solid transparent;
+    overflow: hidden;
+    transition: border 0.2s;
+}
+
+.accordion-item.active {
+    border: 1px solid #334155;
+    border-left: 3px solid #facc15;
+}
+
+.accordion-header {
+    width: 100%;
+    background: none;
+    color: #e2e8f0;
+    border: none;
+    padding: 16px 20px;
+    text-align: left;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.2s, color 0.2s;
+}
+
+.accordion-header:hover {
+    background: #2a384e;
+    color: #ffffff;
+}
+
+.accordion-header .arrow {
+    transition: transform 0.3s ease;
+}
+
+.accordion-header.active .arrow {
+    transform: rotate(180deg);
+}
+
+/* Custom Tooltip */
+[data-tooltip] {
+    position: relative;
+}
+
+[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 8px;
+    padding: 6px 12px;
+    background-color: #ffffff;
+    color: #1e293b;
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.1s ease-in-out;
+    z-index: 10000;
+}
+
+[data-tooltip]:hover::after {
+    opacity: 1;
+}
+
+/* Info Icon and Popup */
+.info-popup-container {
+    display: inline-flex;
+    align-items: center;
+}
+
+.info-icon {
+    color: #94a3b8;
+    transition: color 0.2s;
+    cursor: help;
+}
+
+.accordion-item.active .info-icon {
+    color: #facc15;
+}
+
+.info-popup {
+    position: fixed;
+    width: 320px;
+    background: #0f172a;
+    border: 1px solid #334155;
+    border-left: 3px solid #facc15;
+    border-radius: 8px;
+    padding: 15px;
+    color: #f8fafc;
+    font-size: 13px;
+    line-height: 1.5;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    z-index: 10000;
+    text-align: left;
+    white-space: normal;
+}
+
+.accordion-content {
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease;
+    background: #112240;
+    font-size: 0.85rem;
+    color: #cbd5e1;
+}
+
+.accordion-content.active {
+    padding: 15px 20px;
+    max-height: 500px;
+}
+
+/* Floating Right Panel */
+.panel-right {
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 320px;
+    background: #0A192F;
+    color: #fff;
+    border: 1px solid #1E2D4A;
+    border-radius: 4px;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: calc(100vh - 80px);
+}
+
+/* Minimalist Scrollbar for Right Panel */
+.panel-right::-webkit-scrollbar {
+    width: 6px;
+}
+.panel-right::-webkit-scrollbar-track {
+    background: transparent;
+}
+.panel-right::-webkit-scrollbar-thumb {
+    background-color: #1E2D4A;
+    border-radius: 10px;
+}
+
+.panel-section {
+    padding: 12px 15px;
+    color: #fff;
+    background-color: #0b1c36;
+    border-bottom: 1px solid #1E2D4A;
+    border-top: 1px solid #1E2D4A;
+}
+
+.panel-section h3 {
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+
+.panel-section p {
+    font-size: 0.75rem;
+    line-height: 1.4;
+    color: #cbd5e1;
+}
+
+.panel-body {
+    background: #ffffff;
+    color: #1e293b;
+}
+
+.header-blue, .header-green, .header-yellow, .header-orange { 
+    background-color: #112240; 
+    color: #fff;
+}
+
+.panel-arrow {
+    float: right;
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+.panel-arrow.collapsed {
+    transform: rotate(-90deg);
+}
+
+.panel-body {
+    padding: 10px 15px;
+    font-size: 0.85rem;
+}
+
+select {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+.radio-label, .checkbox-label {
+    display: block;
+    margin-bottom: 6px;
+    cursor: pointer;
+}
+
+.damage-stats p {
+    margin: 4px 0;
+    font-size: 0.8rem;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-content {
+    background: #fff;
+    width: 700px;
+    max-width: 90%;
+    padding: 30px;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px; right: 15px;
+    background: none; border: none;
+    font-size: 20px; color: #666;
+    cursor: pointer;
+}
+
+.modal-title {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    color: #333;
+}
+
+.modal-desc {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 25px;
+}
+
+.modal-images {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.modal-img-card {
+    flex: 1;
+    text-align: center;
+}
+
+.modal-img-card h4 {
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.img-placeholder {
+    height: 100px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+.modal-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+/* Forms & Utils */
+.form-group {
+    margin-bottom: 10px;
+}
+.form-group label { display: block; margin-bottom: 4px; }
+.form-group input { width: 100%; padding: 6px; background: #444; border: 1px solid #555; color: #fff; border-radius: 4px;}
+.btn-primary { background: #4285f4; color: #fff; border: none; padding: 8px 12px; border-radius: 4px; cursor: pointer; width: 100%;}
+.btn-primary:hover { background: #3367d6; }
+.btn-sm { background: #555; color: #fff; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer;}
+.btn-yellow { background: #facc15; color: #1e293b; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer; font-weight: 600; }
+.btn-yellow:hover { background: #eab308; }
+.btn-primary.btn-yellow { padding: 8px 12px; width: 100%; }
+.terminal-box { background: #111; padding: 10px; height: 100px; overflow-y: auto; font-family: monospace; font-size: 0.75rem; color: #0f0; }
+.shelter-list-small { display: flex; flex-direction: column; gap: 5px; }
+.shelter-item { background: #444; padding: 6px; border-radius: 4px; font-size: 0.8rem; border-left: 3px solid #7cb342; }
+
+/* Customizing Leaflet Tooltips/Popups for Light Mode */
+.leaflet-popup-content-wrapper { border-radius: 4px; }

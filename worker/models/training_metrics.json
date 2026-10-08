@@ -1,0 +1,29 @@
+{
+  "r2_score": 0.6915649389596863,
+  "rmse": 0.014096392123755493,
+  "mae": 0.010288119987181923,
+  "trained_on": "real_bandung_2016_2021",
+  "n_samples": 1855,
+  "n_features": 8,
+  "feature_names": [
+    "mean_rain_mm",
+    "median_rain_mm",
+    "n_stations",
+    "month",
+    "is_wet_season",
+    "rain_3day_avg",
+    "rain_7day_avg",
+    "rain_cumulative_3day"
+  ],
+  "timestamp": "2026-06-22T08:12:17.018510",
+  "feature_importance": {
+    "mean_rain_mm": 0.42612771420579154,
+    "median_rain_mm": 0.3487069152178855,
+    "rain_7day_avg": 0.09238567303880789,
+    "rain_cumulative_3day": 0.03768175061004293,
+    "rain_3day_avg": 0.033239744693779216,
+    "n_stations": 0.03273122682969901,
+    "month": 0.025222997054268934,
+    "is_wet_season": 0.0039039783497248795
+  }
+}

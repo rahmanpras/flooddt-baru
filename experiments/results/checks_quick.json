@@ -1,0 +1,2282 @@
+{
+ "sampling": [
+  {
+   "id": "S0",
+   "wetEdges": 0,
+   "diffEdges": 0
+  },
+  {
+   "id": "S1",
+   "wetEdges": 321,
+   "diffEdges": 1
+  },
+  {
+   "id": "S2",
+   "wetEdges": 321,
+   "diffEdges": 1
+  },
+  {
+   "id": "S3",
+   "wetEdges": 66,
+   "diffEdges": 0
+  },
+  {
+   "id": "S4",
+   "wetEdges": 624,
+   "diffEdges": 4
+  },
+  {
+   "id": "S2b",
+   "wetEdges": 321,
+   "diffEdges": 1
+  },
+  {
+   "id": "S4b",
+   "wetEdges": 624,
+   "diffEdges": 4
+  }
+ ],
+ "sampleCheck": [
+  {
+   "scenario": "S0",
+   "origin": 1,
+   "same_found": true,
+   "cost_fixed": 3.564817662564528,
+   "cost_app3": 3.564817662564528,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S0",
+   "origin": 2,
+   "same_found": true,
+   "cost_fixed": 4.441866340734883,
+   "cost_app3": 4.441866340734883,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S0",
+   "origin": 3,
+   "same_found": true,
+   "cost_fixed": 2.65066259302859,
+   "cost_app3": 2.65066259302859,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S0",
+   "origin": 4,
+   "same_found": true,
+   "cost_fixed": 4.346363794825166,
+   "cost_app3": 4.346363794825166,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S0",
+   "origin": 5,
+   "same_found": true,
+   "cost_fixed": 4.441876654079261,
+   "cost_app3": 4.441876654079261,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S0",
+   "origin": 6,
+   "same_found": true,
+   "cost_fixed": 0.7044952892546796,
+   "cost_app3": 0.7044952892546796,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S0",
+   "origin": 7,
+   "same_found": true,
+   "cost_fixed": 2.4584234214942358,
+   "cost_app3": 2.4584234214942358,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S0",
+   "origin": 8,
+   "same_found": true,
+   "cost_fixed": 2.2256283972688755,
+   "cost_app3": 2.2256283972688755,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S0",
+   "origin": 9,
+   "same_found": true,
+   "cost_fixed": 2.2269055616722393,
+   "cost_app3": 2.2269055616722393,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S0",
+   "origin": 10,
+   "same_found": true,
+   "cost_fixed": 0.7572592958365927,
+   "cost_app3": 0.7572592958365927,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S0",
+   "origin": 11,
+   "same_found": true,
+   "cost_fixed": 5.076989917269752,
+   "cost_app3": 5.076989917269752,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S0",
+   "origin": 12,
+   "same_found": true,
+   "cost_fixed": 4.810229265513082,
+   "cost_app3": 4.810229265513082,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S0",
+   "origin": 13,
+   "same_found": true,
+   "cost_fixed": 5.348344416461398,
+   "cost_app3": 5.348344416461398,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S0",
+   "origin": 14,
+   "same_found": true,
+   "cost_fixed": 2.2618652791615577,
+   "cost_app3": 2.2618652791615577,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S0",
+   "origin": 15,
+   "same_found": true,
+   "cost_fixed": 3.729360621015139,
+   "cost_app3": 3.729360621015139,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S0",
+   "origin": 16,
+   "same_found": true,
+   "cost_fixed": 1.4535200703270947,
+   "cost_app3": 1.4535200703270947,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S0",
+   "origin": 17,
+   "same_found": true,
+   "cost_fixed": 4.427886834658516,
+   "cost_app3": 4.427886834658516,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S0",
+   "origin": 18,
+   "same_found": true,
+   "cost_fixed": 2.342959550620302,
+   "cost_app3": 2.342959550620302,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S0",
+   "origin": 19,
+   "same_found": true,
+   "cost_fixed": 2.0720846708448812,
+   "cost_app3": 2.0720846708448812,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S0",
+   "origin": 20,
+   "same_found": true,
+   "cost_fixed": 8.410266075151936,
+   "cost_app3": 8.410266075151936,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S0",
+   "origin": 21,
+   "same_found": true,
+   "cost_fixed": 1.5022110284589794,
+   "cost_app3": 1.5022110284589794,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S0",
+   "origin": 22,
+   "same_found": true,
+   "cost_fixed": 2.2373196172301695,
+   "cost_app3": 2.2373196172301695,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S0",
+   "origin": 23,
+   "same_found": true,
+   "cost_fixed": 5.713612055925252,
+   "cost_app3": 5.713612055925252,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S0",
+   "origin": 24,
+   "same_found": true,
+   "cost_fixed": 3.7965230201526836,
+   "cost_app3": 3.7965230201526836,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S0",
+   "origin": 25,
+   "same_found": true,
+   "cost_fixed": 2.0189984917267685,
+   "cost_app3": 2.0189984917267685,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S0",
+   "origin": 26,
+   "same_found": true,
+   "cost_fixed": 1.0686625314637863,
+   "cost_app3": 1.0686625314637863,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S0",
+   "origin": 27,
+   "same_found": true,
+   "cost_fixed": 2.1870182209889024,
+   "cost_app3": 2.1870182209889024,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S0",
+   "origin": 28,
+   "same_found": true,
+   "cost_fixed": 3.3577122985533876,
+   "cost_app3": 3.3577122985533876,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S0",
+   "origin": 29,
+   "same_found": true,
+   "cost_fixed": 5.535369286424504,
+   "cost_app3": 5.535369286424504,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S0",
+   "origin": 30,
+   "same_found": true,
+   "cost_fixed": 2.6793256403951027,
+   "cost_app3": 2.6793256403951027,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S0",
+   "origin": 31,
+   "same_found": true,
+   "cost_fixed": 3.517528279754677,
+   "cost_app3": 3.517528279754677,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S0",
+   "origin": 32,
+   "same_found": true,
+   "cost_fixed": 1.5915587790758672,
+   "cost_app3": 1.5915587790758672,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S0",
+   "origin": 33,
+   "same_found": true,
+   "cost_fixed": 2.2529251481772086,
+   "cost_app3": 2.2529251481772086,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S0",
+   "origin": 34,
+   "same_found": true,
+   "cost_fixed": 1.9226573120045223,
+   "cost_app3": 1.9226573120045223,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S0",
+   "origin": 35,
+   "same_found": true,
+   "cost_fixed": 3.69163676421054,
+   "cost_app3": 3.69163676421054,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S0",
+   "origin": 36,
+   "same_found": true,
+   "cost_fixed": 4.551564469775901,
+   "cost_app3": 4.551564469775901,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S0",
+   "origin": 37,
+   "same_found": true,
+   "cost_fixed": 3.70257332625693,
+   "cost_app3": 3.70257332625693,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S0",
+   "origin": 38,
+   "same_found": true,
+   "cost_fixed": 4.866922228801176,
+   "cost_app3": 4.866922228801176,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S0",
+   "origin": 39,
+   "same_found": true,
+   "cost_fixed": 3.89451522681782,
+   "cost_app3": 3.89451522681782,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S0",
+   "origin": 40,
+   "same_found": true,
+   "cost_fixed": 4.2719242605625505,
+   "cost_app3": 4.2719242605625505,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S1",
+   "origin": 1,
+   "same_found": true,
+   "cost_fixed": 3.564817662564528,
+   "cost_app3": 3.564817662564528,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S1",
+   "origin": 2,
+   "same_found": true,
+   "cost_fixed": 4.441866340734883,
+   "cost_app3": 4.441866340734883,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S1",
+   "origin": 3,
+   "same_found": true,
+   "cost_fixed": 2.65066259302859,
+   "cost_app3": 2.65066259302859,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S1",
+   "origin": 4,
+   "same_found": true,
+   "cost_fixed": 4.346363794825166,
+   "cost_app3": 4.346363794825166,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S1",
+   "origin": 5,
+   "same_found": true,
+   "cost_fixed": 4.801274945637147,
+   "cost_app3": 4.801274945637147,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S1",
+   "origin": 6,
+   "same_found": true,
+   "cost_fixed": 0.7044952892546796,
+   "cost_app3": 0.7044952892546796,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S1",
+   "origin": 7,
+   "same_found": true,
+   "cost_fixed": 2.9040960401553204,
+   "cost_app3": 2.9040960401553204,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S1",
+   "origin": 8,
+   "same_found": true,
+   "cost_fixed": 2.804748119971587,
+   "cost_app3": 2.804748119971587,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S1",
+   "origin": 9,
+   "same_found": true,
+   "cost_fixed": 2.2269055616722393,
+   "cost_app3": 2.2269055616722393,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S1",
+   "origin": 10,
+   "same_found": true,
+   "cost_fixed": 0.7572592958365927,
+   "cost_app3": 0.7572592958365927,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S1",
+   "origin": 11,
+   "same_found": true,
+   "cost_fixed": 5.656109639972467,
+   "cost_app3": 5.656109639972467,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S1",
+   "origin": 12,
+   "same_found": true,
+   "cost_fixed": 5.550750680985934,
+   "cost_app3": 5.550750680985934,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S1",
+   "origin": 13,
+   "same_found": true,
+   "cost_fixed": 5.553177141132112,
+   "cost_app3": 5.553177141132112,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S1",
+   "origin": 14,
+   "same_found": true,
+   "cost_fixed": 2.2618652791615577,
+   "cost_app3": 2.2618652791615577,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S1",
+   "origin": 15,
+   "same_found": true,
+   "cost_fixed": 3.9341933456858547,
+   "cost_app3": 3.9341933456858547,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S1",
+   "origin": 16,
+   "same_found": true,
+   "cost_fixed": 1.4535200703270947,
+   "cost_app3": 1.4535200703270947,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S1",
+   "origin": 17,
+   "same_found": true,
+   "cost_fixed": 4.440041784824482,
+   "cost_app3": 4.440041784824482,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S1",
+   "origin": 18,
+   "same_found": true,
+   "cost_fixed": 2.4766781575554075,
+   "cost_app3": 2.4766781575554075,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S1",
+   "origin": 19,
+   "same_found": true,
+   "cost_fixed": 2.0720846708448812,
+   "cost_app3": 2.0720846708448812,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S1",
+   "origin": 20,
+   "same_found": true,
+   "cost_fixed": 8.55078214957495,
+   "cost_app3": 8.55078214957495,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S1",
+   "origin": 21,
+   "same_found": true,
+   "cost_fixed": 1.5022110284589794,
+   "cost_app3": 1.5022110284589794,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S1",
+   "origin": 22,
+   "same_found": true,
+   "cost_fixed": 2.2373196172301695,
+   "cost_app3": 2.2373196172301695,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S1",
+   "origin": 23,
+   "same_found": true,
+   "cost_fixed": 5.854128130348264,
+   "cost_app3": 5.854128130348264,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S1",
+   "origin": 24,
+   "same_found": true,
+   "cost_fixed": 4.410772221632443,
+   "cost_app3": 4.410772221632443,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S1",
+   "origin": 25,
+   "same_found": true,
+   "cost_fixed": 2.0189984917267685,
+   "cost_app3": 2.0189984917267685,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S1",
+   "origin": 26,
+   "same_found": true,
+   "cost_fixed": 1.0686625314637863,
+   "cost_app3": 1.0686625314637863,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S1",
+   "origin": 27,
+   "same_found": true,
+   "cost_fixed": 2.880650324934513,
+   "cost_app3": 2.880650324934513,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S1",
+   "origin": 28,
+   "same_found": true,
+   "cost_fixed": 3.6244611508403515,
+   "cost_app3": 3.6244611508403515,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S1",
+   "origin": 29,
+   "same_found": true,
+   "cost_fixed": 6.036320436606507,
+   "cost_app3": 6.036320436606507,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S1",
+   "origin": 30,
+   "same_found": true,
+   "cost_fixed": 3.599087139488655,
+   "cost_app3": 3.599087139488655,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S1",
+   "origin": 31,
+   "same_found": true,
+   "cost_fixed": 4.0184794299366775,
+   "cost_app3": 4.0184794299366775,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S1",
+   "origin": 32,
+   "same_found": true,
+   "cost_fixed": 4.589221973654209,
+   "cost_app3": 4.589221973654209,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S1",
+   "origin": 33,
+   "same_found": true,
+   "cost_fixed": 2.3875736440141635,
+   "cost_app3": 2.3875736440141635,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S1",
+   "origin": 34,
+   "same_found": true,
+   "cost_fixed": 2.287142888136375,
+   "cost_app3": 2.287142888136375,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S1",
+   "origin": 35,
+   "same_found": true,
+   "cost_fixed": 3.69163676421054,
+   "cost_app3": 3.69163676421054,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S1",
+   "origin": 36,
+   "same_found": true,
+   "cost_fixed": 4.975757691793196,
+   "cost_app3": 4.975757691793196,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S1",
+   "origin": 37,
+   "same_found": true,
+   "cost_fixed": 3.8372218220938854,
+   "cost_app3": 3.8372218220938854,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S1",
+   "origin": 38,
+   "same_found": true,
+   "cost_fixed": 5.2587308542747655,
+   "cost_app3": 5.2587308542747655,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S1",
+   "origin": 39,
+   "same_found": true,
+   "cost_fixed": 6.797045823989049,
+   "cost_app3": 6.797045823989049,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S1",
+   "origin": 40,
+   "same_found": true,
+   "cost_fixed": 5.393132176842923,
+   "cost_app3": 5.393132176842923,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2",
+   "origin": 1,
+   "same_found": true,
+   "cost_fixed": 3.564817662564528,
+   "cost_app3": 3.564817662564528,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2",
+   "origin": 2,
+   "same_found": true,
+   "cost_fixed": 4.441866340734883,
+   "cost_app3": 4.441866340734883,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2",
+   "origin": 3,
+   "same_found": true,
+   "cost_fixed": 2.65066259302859,
+   "cost_app3": 2.65066259302859,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2",
+   "origin": 4,
+   "same_found": true,
+   "cost_fixed": 4.346363794825166,
+   "cost_app3": 4.346363794825166,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2",
+   "origin": 5,
+   "same_found": true,
+   "cost_fixed": 4.801274945637147,
+   "cost_app3": 4.801274945637147,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2",
+   "origin": 6,
+   "same_found": true,
+   "cost_fixed": 0.7044952892546796,
+   "cost_app3": 0.7044952892546796,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2",
+   "origin": 7,
+   "same_found": true,
+   "cost_fixed": 2.9040960401553204,
+   "cost_app3": 2.9040960401553204,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2",
+   "origin": 8,
+   "same_found": true,
+   "cost_fixed": 3.2258657016155237,
+   "cost_app3": 3.2258657016155237,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2",
+   "origin": 9,
+   "same_found": true,
+   "cost_fixed": 2.2269055616722393,
+   "cost_app3": 2.2269055616722393,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2",
+   "origin": 10,
+   "same_found": true,
+   "cost_fixed": 0.7572592958365927,
+   "cost_app3": 0.7572592958365927,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2",
+   "origin": 11,
+   "same_found": true,
+   "cost_fixed": 6.077227221616402,
+   "cost_app3": 6.077227221616402,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2",
+   "origin": 12,
+   "same_found": true,
+   "cost_fixed": 5.6941703415216995,
+   "cost_app3": 5.6941703415216995,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2",
+   "origin": 13,
+   "same_found": true,
+   "cost_fixed": 5.553177141132112,
+   "cost_app3": 5.553177141132112,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2",
+   "origin": 14,
+   "same_found": true,
+   "cost_fixed": 2.2618652791615577,
+   "cost_app3": 2.2618652791615577,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2",
+   "origin": 15,
+   "same_found": true,
+   "cost_fixed": 3.9341933456858547,
+   "cost_app3": 3.9341933456858547,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2",
+   "origin": 16,
+   "same_found": true,
+   "cost_fixed": 1.4535200703270947,
+   "cost_app3": 1.4535200703270947,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2",
+   "origin": 17,
+   "same_found": true,
+   "cost_fixed": 4.440041784824482,
+   "cost_app3": 4.440041784824482,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2",
+   "origin": 18,
+   "same_found": true,
+   "cost_fixed": 2.5997019575698985,
+   "cost_app3": 2.5997019575698985,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2",
+   "origin": 19,
+   "same_found": true,
+   "cost_fixed": 2.0720846708448812,
+   "cost_app3": 2.0720846708448812,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2",
+   "origin": 20,
+   "same_found": true,
+   "cost_fixed": 8.55078214957495,
+   "cost_app3": 8.55078214957495,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2",
+   "origin": 21,
+   "same_found": true,
+   "cost_fixed": 1.5022110284589794,
+   "cost_app3": 1.5022110284589794,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2",
+   "origin": 22,
+   "same_found": true,
+   "cost_fixed": 2.2373196172301695,
+   "cost_app3": 2.2373196172301695,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2",
+   "origin": 23,
+   "same_found": true,
+   "cost_fixed": 5.854128130348264,
+   "cost_app3": 5.854128130348264,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2",
+   "origin": 24,
+   "same_found": true,
+   "cost_fixed": 4.410772221632443,
+   "cost_app3": 4.410772221632443,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2",
+   "origin": 25,
+   "same_found": true,
+   "cost_fixed": 2.0189984917267685,
+   "cost_app3": 2.0189984917267685,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2",
+   "origin": 26,
+   "same_found": true,
+   "cost_fixed": 1.0686625314637863,
+   "cost_app3": 1.0686625314637863,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2",
+   "origin": 27,
+   "same_found": true,
+   "cost_fixed": 2.880650324934513,
+   "cost_app3": 2.880650324934513,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2",
+   "origin": 28,
+   "same_found": true,
+   "cost_fixed": 3.6244611508403515,
+   "cost_app3": 3.6244611508403515,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2",
+   "origin": 29,
+   "same_found": true,
+   "cost_fixed": 6.036320436606507,
+   "cost_app3": 6.036320436606507,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2",
+   "origin": 30,
+   "same_found": true,
+   "cost_fixed": 3.599087139488655,
+   "cost_app3": 3.599087139488655,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2",
+   "origin": 31,
+   "same_found": true,
+   "cost_fixed": 4.0184794299366775,
+   "cost_app3": 4.0184794299366775,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2",
+   "origin": 32,
+   "same_found": true,
+   "cost_fixed": 4.589221973654209,
+   "cost_app3": 4.589221973654209,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2",
+   "origin": 33,
+   "same_found": true,
+   "cost_fixed": 2.3875736440141635,
+   "cost_app3": 2.3875736440141635,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2",
+   "origin": 34,
+   "same_found": true,
+   "cost_fixed": 2.287142888136375,
+   "cost_app3": 2.287142888136375,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2",
+   "origin": 35,
+   "same_found": true,
+   "cost_fixed": 3.69163676421054,
+   "cost_app3": 3.69163676421054,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2",
+   "origin": 36,
+   "same_found": true,
+   "cost_fixed": 4.975757691793196,
+   "cost_app3": 4.975757691793196,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2",
+   "origin": 37,
+   "same_found": true,
+   "cost_fixed": 3.8372218220938854,
+   "cost_app3": 3.8372218220938854,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2",
+   "origin": 38,
+   "same_found": true,
+   "cost_fixed": 5.2587308542747655,
+   "cost_app3": 5.2587308542747655,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2",
+   "origin": 39,
+   "same_found": true,
+   "cost_fixed": 6.797045823989049,
+   "cost_app3": 6.797045823989049,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2",
+   "origin": 40,
+   "same_found": true,
+   "cost_fixed": 5.393132176842923,
+   "cost_app3": 5.393132176842923,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S3",
+   "origin": 1,
+   "same_found": true,
+   "cost_fixed": 3.564817662564528,
+   "cost_app3": 3.564817662564528,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S3",
+   "origin": 2,
+   "same_found": true,
+   "cost_fixed": 4.441866340734883,
+   "cost_app3": 4.441866340734883,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S3",
+   "origin": 3,
+   "same_found": true,
+   "cost_fixed": 2.65066259302859,
+   "cost_app3": 2.65066259302859,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S3",
+   "origin": 4,
+   "same_found": true,
+   "cost_fixed": 4.346363794825166,
+   "cost_app3": 4.346363794825166,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S3",
+   "origin": 5,
+   "same_found": true,
+   "cost_fixed": 4.441876654079261,
+   "cost_app3": 4.441876654079261,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S3",
+   "origin": 6,
+   "same_found": true,
+   "cost_fixed": 0.7044952892546796,
+   "cost_app3": 0.7044952892546796,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S3",
+   "origin": 7,
+   "same_found": true,
+   "cost_fixed": 2.4584234214942358,
+   "cost_app3": 2.4584234214942358,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S3",
+   "origin": 8,
+   "same_found": true,
+   "cost_fixed": 2.2256283972688755,
+   "cost_app3": 2.2256283972688755,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S3",
+   "origin": 9,
+   "same_found": true,
+   "cost_fixed": 2.2269055616722393,
+   "cost_app3": 2.2269055616722393,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S3",
+   "origin": 10,
+   "same_found": true,
+   "cost_fixed": 0.7572592958365927,
+   "cost_app3": 0.7572592958365927,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S3",
+   "origin": 11,
+   "same_found": true,
+   "cost_fixed": 5.076989917269752,
+   "cost_app3": 5.076989917269752,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S3",
+   "origin": 12,
+   "same_found": true,
+   "cost_fixed": 4.810229265513082,
+   "cost_app3": 4.810229265513082,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S3",
+   "origin": 13,
+   "same_found": true,
+   "cost_fixed": 5.348344416461398,
+   "cost_app3": 5.348344416461398,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S3",
+   "origin": 14,
+   "same_found": true,
+   "cost_fixed": 2.2618652791615577,
+   "cost_app3": 2.2618652791615577,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S3",
+   "origin": 15,
+   "same_found": true,
+   "cost_fixed": 3.729360621015139,
+   "cost_app3": 3.729360621015139,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S3",
+   "origin": 16,
+   "same_found": true,
+   "cost_fixed": 1.4535200703270947,
+   "cost_app3": 1.4535200703270947,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S3",
+   "origin": 17,
+   "same_found": true,
+   "cost_fixed": 4.427886834658516,
+   "cost_app3": 4.427886834658516,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S3",
+   "origin": 18,
+   "same_found": true,
+   "cost_fixed": 2.342959550620302,
+   "cost_app3": 2.342959550620302,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S3",
+   "origin": 19,
+   "same_found": true,
+   "cost_fixed": 2.0720846708448812,
+   "cost_app3": 2.0720846708448812,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S3",
+   "origin": 20,
+   "same_found": true,
+   "cost_fixed": 10.531035354604882,
+   "cost_app3": 10.531035354604882,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S3",
+   "origin": 21,
+   "same_found": true,
+   "cost_fixed": 3.668816742014923,
+   "cost_app3": 3.668816742014923,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S3",
+   "origin": 22,
+   "same_found": true,
+   "cost_fixed": 4.709770728467192,
+   "cost_app3": 4.709770728467192,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S3",
+   "origin": 23,
+   "same_found": true,
+   "cost_fixed": 6.994805245597003,
+   "cost_app3": 6.994805245597003,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S3",
+   "origin": 24,
+   "same_found": true,
+   "cost_fixed": 7.24585174044368,
+   "cost_app3": 7.24585174044368,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S3",
+   "origin": 25,
+   "same_found": true,
+   "cost_fixed": 2.0189984917267685,
+   "cost_app3": 2.0189984917267685,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S3",
+   "origin": 26,
+   "same_found": true,
+   "cost_fixed": 1.0686625314637863,
+   "cost_app3": 1.0686625314637863,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S3",
+   "origin": 27,
+   "same_found": true,
+   "cost_fixed": 2.1870182209889024,
+   "cost_app3": 2.1870182209889024,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S3",
+   "origin": 28,
+   "same_found": true,
+   "cost_fixed": 3.87186526013574,
+   "cost_app3": 3.87186526013574,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S3",
+   "origin": 29,
+   "same_found": true,
+   "cost_fixed": 8.682324270786753,
+   "cost_app3": 8.682324270786753,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S3",
+   "origin": 30,
+   "same_found": true,
+   "cost_fixed": 2.6793256403951027,
+   "cost_app3": 2.6793256403951027,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S3",
+   "origin": 31,
+   "same_found": true,
+   "cost_fixed": 7.751541114411333,
+   "cost_app3": 7.751541114411333,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S3",
+   "origin": 32,
+   "same_found": true,
+   "cost_fixed": 1.5915587790758672,
+   "cost_app3": 1.5915587790758672,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S3",
+   "origin": 33,
+   "same_found": true,
+   "cost_fixed": 6.776370612309828,
+   "cost_app3": 6.776370612309828,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S3",
+   "origin": 34,
+   "same_found": true,
+   "cost_fixed": 5.499729286913554,
+   "cost_app3": 5.499729286913554,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S3",
+   "origin": 35,
+   "same_found": true,
+   "cost_fixed": 7.190184711929705,
+   "cost_app3": 7.190184711929705,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S3",
+   "origin": 36,
+   "same_found": true,
+   "cost_fixed": 8.78557730443256,
+   "cost_app3": 8.78557730443256,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S3",
+   "origin": 37,
+   "same_found": true,
+   "cost_fixed": 8.226018790389553,
+   "cost_app3": 8.226018790389553,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S3",
+   "origin": 38,
+   "same_found": true,
+   "cost_fixed": 6.106952656971925,
+   "cost_app3": 6.106952656971925,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S3",
+   "origin": 39,
+   "same_found": true,
+   "cost_fixed": 3.89451522681782,
+   "cost_app3": 3.89451522681782,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S3",
+   "origin": 40,
+   "same_found": true,
+   "cost_fixed": 4.2719242605625505,
+   "cost_app3": 4.2719242605625505,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4",
+   "origin": 1,
+   "same_found": true,
+   "cost_fixed": 3.564817662564528,
+   "cost_app3": 3.564817662564528,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4",
+   "origin": 2,
+   "same_found": true,
+   "cost_fixed": 4.441866340734883,
+   "cost_app3": 4.441866340734883,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4",
+   "origin": 3,
+   "same_found": true,
+   "cost_fixed": null,
+   "cost_app3": null,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4",
+   "origin": 4,
+   "same_found": true,
+   "cost_fixed": 4.346363794825166,
+   "cost_app3": 4.346363794825166,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4",
+   "origin": 5,
+   "same_found": true,
+   "cost_fixed": 4.441876654079261,
+   "cost_app3": 4.441876654079261,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4",
+   "origin": 6,
+   "same_found": true,
+   "cost_fixed": 0.7044952892546796,
+   "cost_app3": 0.7044952892546796,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4",
+   "origin": 7,
+   "same_found": true,
+   "cost_fixed": 2.4584234214942358,
+   "cost_app3": 2.4584234214942358,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4",
+   "origin": 8,
+   "same_found": true,
+   "cost_fixed": 2.2256283972688755,
+   "cost_app3": 2.2256283972688755,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4",
+   "origin": 9,
+   "same_found": true,
+   "cost_fixed": 2.2269055616722393,
+   "cost_app3": 2.2269055616722393,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4",
+   "origin": 10,
+   "same_found": true,
+   "cost_fixed": null,
+   "cost_app3": null,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4",
+   "origin": 11,
+   "same_found": true,
+   "cost_fixed": 5.076989917269752,
+   "cost_app3": 5.076989917269752,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4",
+   "origin": 12,
+   "same_found": true,
+   "cost_fixed": 4.810229265513082,
+   "cost_app3": 4.810229265513082,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4",
+   "origin": 13,
+   "same_found": true,
+   "cost_fixed": 5.348344416461398,
+   "cost_app3": 5.348344416461398,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4",
+   "origin": 14,
+   "same_found": true,
+   "cost_fixed": 2.2618652791615577,
+   "cost_app3": 2.2618652791615577,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4",
+   "origin": 15,
+   "same_found": true,
+   "cost_fixed": 3.729360621015139,
+   "cost_app3": 3.729360621015139,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4",
+   "origin": 16,
+   "same_found": true,
+   "cost_fixed": 1.4535200703270947,
+   "cost_app3": 1.4535200703270947,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4",
+   "origin": 17,
+   "same_found": true,
+   "cost_fixed": null,
+   "cost_app3": null,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4",
+   "origin": 18,
+   "same_found": true,
+   "cost_fixed": 2.342959550620302,
+   "cost_app3": 2.342959550620302,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4",
+   "origin": 19,
+   "same_found": true,
+   "cost_fixed": 2.0720846708448812,
+   "cost_app3": 2.0720846708448812,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4",
+   "origin": 20,
+   "same_found": true,
+   "cost_fixed": 9.634770113415696,
+   "cost_app3": 9.634770113415696,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4",
+   "origin": 21,
+   "same_found": true,
+   "cost_fixed": 1.5022110284589794,
+   "cost_app3": 1.5022110284589794,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4",
+   "origin": 22,
+   "same_found": true,
+   "cost_fixed": 2.2373196172301695,
+   "cost_app3": 2.2373196172301695,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4",
+   "origin": 23,
+   "same_found": true,
+   "cost_fixed": null,
+   "cost_app3": null,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4",
+   "origin": 24,
+   "same_found": true,
+   "cost_fixed": 3.7965230201526836,
+   "cost_app3": 3.7965230201526836,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4",
+   "origin": 25,
+   "same_found": true,
+   "cost_fixed": 2.0189984917267685,
+   "cost_app3": 2.0189984917267685,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4",
+   "origin": 26,
+   "same_found": true,
+   "cost_fixed": 1.0686625314637863,
+   "cost_app3": 1.0686625314637863,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4",
+   "origin": 27,
+   "same_found": true,
+   "cost_fixed": 2.1870182209889024,
+   "cost_app3": 2.1870182209889024,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4",
+   "origin": 28,
+   "same_found": true,
+   "cost_fixed": 3.3577122985533876,
+   "cost_app3": 3.3577122985533876,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4",
+   "origin": 29,
+   "same_found": true,
+   "cost_fixed": 5.535369286424504,
+   "cost_app3": 5.535369286424504,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4",
+   "origin": 30,
+   "same_found": true,
+   "cost_fixed": null,
+   "cost_app3": null,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4",
+   "origin": 31,
+   "same_found": true,
+   "cost_fixed": 3.517528279754677,
+   "cost_app3": 3.517528279754677,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4",
+   "origin": 32,
+   "same_found": true,
+   "cost_fixed": 1.5915587790758672,
+   "cost_app3": 1.5915587790758672,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4",
+   "origin": 33,
+   "same_found": true,
+   "cost_fixed": 2.2529251481772086,
+   "cost_app3": 2.2529251481772086,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4",
+   "origin": 34,
+   "same_found": true,
+   "cost_fixed": 1.9226573120045223,
+   "cost_app3": 1.9226573120045223,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4",
+   "origin": 35,
+   "same_found": true,
+   "cost_fixed": 3.69163676421054,
+   "cost_app3": 3.69163676421054,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4",
+   "origin": 36,
+   "same_found": true,
+   "cost_fixed": 4.551564469775901,
+   "cost_app3": 4.551564469775901,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4",
+   "origin": 37,
+   "same_found": true,
+   "cost_fixed": null,
+   "cost_app3": null,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4",
+   "origin": 38,
+   "same_found": true,
+   "cost_fixed": 4.866922228801176,
+   "cost_app3": 4.866922228801176,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4",
+   "origin": 39,
+   "same_found": true,
+   "cost_fixed": 3.89451522681782,
+   "cost_app3": 3.89451522681782,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4",
+   "origin": 40,
+   "same_found": true,
+   "cost_fixed": 4.2719242605625505,
+   "cost_app3": 4.2719242605625505,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2b",
+   "origin": 1,
+   "same_found": true,
+   "cost_fixed": 3.564817662564528,
+   "cost_app3": 3.564817662564528,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2b",
+   "origin": 2,
+   "same_found": true,
+   "cost_fixed": 4.441866340734883,
+   "cost_app3": 4.441866340734883,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2b",
+   "origin": 3,
+   "same_found": true,
+   "cost_fixed": 2.65066259302859,
+   "cost_app3": 2.65066259302859,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2b",
+   "origin": 4,
+   "same_found": true,
+   "cost_fixed": 4.346363794825166,
+   "cost_app3": 4.346363794825166,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2b",
+   "origin": 5,
+   "same_found": true,
+   "cost_fixed": 4.801274945637147,
+   "cost_app3": 4.801274945637147,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2b",
+   "origin": 6,
+   "same_found": true,
+   "cost_fixed": 0.7044952892546796,
+   "cost_app3": 0.7044952892546796,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2b",
+   "origin": 7,
+   "same_found": true,
+   "cost_fixed": 2.9040960401553204,
+   "cost_app3": 2.9040960401553204,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2b",
+   "origin": 8,
+   "same_found": true,
+   "cost_fixed": 3.2258657016155237,
+   "cost_app3": 3.2258657016155237,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2b",
+   "origin": 9,
+   "same_found": true,
+   "cost_fixed": 2.2269055616722393,
+   "cost_app3": 2.2269055616722393,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2b",
+   "origin": 10,
+   "same_found": true,
+   "cost_fixed": 0.7572592958365927,
+   "cost_app3": 0.7572592958365927,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2b",
+   "origin": 11,
+   "same_found": true,
+   "cost_fixed": 6.077227221616402,
+   "cost_app3": 6.077227221616402,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2b",
+   "origin": 12,
+   "same_found": true,
+   "cost_fixed": 5.6941703415216995,
+   "cost_app3": 5.6941703415216995,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2b",
+   "origin": 13,
+   "same_found": true,
+   "cost_fixed": 5.553177141132112,
+   "cost_app3": 5.553177141132112,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2b",
+   "origin": 14,
+   "same_found": true,
+   "cost_fixed": 2.2618652791615577,
+   "cost_app3": 2.2618652791615577,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2b",
+   "origin": 15,
+   "same_found": true,
+   "cost_fixed": 3.9341933456858547,
+   "cost_app3": 3.9341933456858547,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2b",
+   "origin": 16,
+   "same_found": true,
+   "cost_fixed": 1.4535200703270947,
+   "cost_app3": 1.4535200703270947,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2b",
+   "origin": 17,
+   "same_found": true,
+   "cost_fixed": 4.440041784824482,
+   "cost_app3": 4.440041784824482,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2b",
+   "origin": 18,
+   "same_found": true,
+   "cost_fixed": 2.5997019575698985,
+   "cost_app3": 2.5997019575698985,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2b",
+   "origin": 19,
+   "same_found": true,
+   "cost_fixed": 2.0720846708448812,
+   "cost_app3": 2.0720846708448812,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2b",
+   "origin": 20,
+   "same_found": true,
+   "cost_fixed": 8.55078214957495,
+   "cost_app3": 8.55078214957495,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2b",
+   "origin": 21,
+   "same_found": true,
+   "cost_fixed": 1.5022110284589794,
+   "cost_app3": 1.5022110284589794,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2b",
+   "origin": 22,
+   "same_found": true,
+   "cost_fixed": 2.2373196172301695,
+   "cost_app3": 2.2373196172301695,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2b",
+   "origin": 23,
+   "same_found": true,
+   "cost_fixed": 5.854128130348264,
+   "cost_app3": 5.854128130348264,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2b",
+   "origin": 24,
+   "same_found": true,
+   "cost_fixed": 4.410772221632443,
+   "cost_app3": 4.410772221632443,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2b",
+   "origin": 25,
+   "same_found": true,
+   "cost_fixed": 2.0189984917267685,
+   "cost_app3": 2.0189984917267685,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2b",
+   "origin": 26,
+   "same_found": true,
+   "cost_fixed": 1.0686625314637863,
+   "cost_app3": 1.0686625314637863,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2b",
+   "origin": 27,
+   "same_found": true,
+   "cost_fixed": 2.880650324934513,
+   "cost_app3": 2.880650324934513,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2b",
+   "origin": 28,
+   "same_found": true,
+   "cost_fixed": 3.6244611508403515,
+   "cost_app3": 3.6244611508403515,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2b",
+   "origin": 29,
+   "same_found": true,
+   "cost_fixed": 6.036320436606507,
+   "cost_app3": 6.036320436606507,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2b",
+   "origin": 30,
+   "same_found": true,
+   "cost_fixed": 3.599087139488655,
+   "cost_app3": 3.599087139488655,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2b",
+   "origin": 31,
+   "same_found": true,
+   "cost_fixed": 4.0184794299366775,
+   "cost_app3": 4.0184794299366775,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2b",
+   "origin": 32,
+   "same_found": true,
+   "cost_fixed": 4.589221973654209,
+   "cost_app3": 4.589221973654209,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2b",
+   "origin": 33,
+   "same_found": true,
+   "cost_fixed": 2.3875736440141635,
+   "cost_app3": 2.3875736440141635,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2b",
+   "origin": 34,
+   "same_found": true,
+   "cost_fixed": 2.287142888136375,
+   "cost_app3": 2.287142888136375,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2b",
+   "origin": 35,
+   "same_found": true,
+   "cost_fixed": 3.69163676421054,
+   "cost_app3": 3.69163676421054,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2b",
+   "origin": 36,
+   "same_found": true,
+   "cost_fixed": 4.975757691793196,
+   "cost_app3": 4.975757691793196,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2b",
+   "origin": 37,
+   "same_found": true,
+   "cost_fixed": 3.8372218220938854,
+   "cost_app3": 3.8372218220938854,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2b",
+   "origin": 38,
+   "same_found": true,
+   "cost_fixed": 5.2587308542747655,
+   "cost_app3": 5.2587308542747655,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2b",
+   "origin": 39,
+   "same_found": true,
+   "cost_fixed": 6.797045823989049,
+   "cost_app3": 6.797045823989049,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S2b",
+   "origin": 40,
+   "same_found": true,
+   "cost_fixed": 5.393132176842923,
+   "cost_app3": 5.393132176842923,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4b",
+   "origin": 1,
+   "same_found": true,
+   "cost_fixed": 3.564817662564528,
+   "cost_app3": 3.564817662564528,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4b",
+   "origin": 2,
+   "same_found": true,
+   "cost_fixed": 4.441866340734883,
+   "cost_app3": 4.441866340734883,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4b",
+   "origin": 3,
+   "same_found": true,
+   "cost_fixed": null,
+   "cost_app3": null,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4b",
+   "origin": 4,
+   "same_found": true,
+   "cost_fixed": 4.346363794825166,
+   "cost_app3": 4.346363794825166,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4b",
+   "origin": 5,
+   "same_found": true,
+   "cost_fixed": 4.441876654079261,
+   "cost_app3": 4.441876654079261,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4b",
+   "origin": 6,
+   "same_found": true,
+   "cost_fixed": 0.7044952892546796,
+   "cost_app3": 0.7044952892546796,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4b",
+   "origin": 7,
+   "same_found": true,
+   "cost_fixed": 2.4584234214942358,
+   "cost_app3": 2.4584234214942358,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4b",
+   "origin": 8,
+   "same_found": true,
+   "cost_fixed": 2.2256283972688755,
+   "cost_app3": 2.2256283972688755,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4b",
+   "origin": 9,
+   "same_found": true,
+   "cost_fixed": 2.2269055616722393,
+   "cost_app3": 2.2269055616722393,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4b",
+   "origin": 10,
+   "same_found": true,
+   "cost_fixed": null,
+   "cost_app3": null,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4b",
+   "origin": 11,
+   "same_found": true,
+   "cost_fixed": 5.076989917269752,
+   "cost_app3": 5.076989917269752,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4b",
+   "origin": 12,
+   "same_found": true,
+   "cost_fixed": 4.810229265513082,
+   "cost_app3": 4.810229265513082,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4b",
+   "origin": 13,
+   "same_found": true,
+   "cost_fixed": 5.348344416461398,
+   "cost_app3": 5.348344416461398,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4b",
+   "origin": 14,
+   "same_found": true,
+   "cost_fixed": 2.2618652791615577,
+   "cost_app3": 2.2618652791615577,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4b",
+   "origin": 15,
+   "same_found": true,
+   "cost_fixed": 3.729360621015139,
+   "cost_app3": 3.729360621015139,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4b",
+   "origin": 16,
+   "same_found": true,
+   "cost_fixed": 1.4535200703270947,
+   "cost_app3": 1.4535200703270947,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4b",
+   "origin": 17,
+   "same_found": true,
+   "cost_fixed": null,
+   "cost_app3": null,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4b",
+   "origin": 18,
+   "same_found": true,
+   "cost_fixed": 2.342959550620302,
+   "cost_app3": 2.342959550620302,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4b",
+   "origin": 19,
+   "same_found": true,
+   "cost_fixed": 2.0720846708448812,
+   "cost_app3": 2.0720846708448812,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4b",
+   "origin": 20,
+   "same_found": true,
+   "cost_fixed": 9.634770113415696,
+   "cost_app3": 9.634770113415696,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4b",
+   "origin": 21,
+   "same_found": true,
+   "cost_fixed": 1.5022110284589794,
+   "cost_app3": 1.5022110284589794,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4b",
+   "origin": 22,
+   "same_found": true,
+   "cost_fixed": 2.2373196172301695,
+   "cost_app3": 2.2373196172301695,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4b",
+   "origin": 23,
+   "same_found": true,
+   "cost_fixed": null,
+   "cost_app3": null,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4b",
+   "origin": 24,
+   "same_found": true,
+   "cost_fixed": 3.7965230201526836,
+   "cost_app3": 3.7965230201526836,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4b",
+   "origin": 25,
+   "same_found": true,
+   "cost_fixed": 2.0189984917267685,
+   "cost_app3": 2.0189984917267685,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4b",
+   "origin": 26,
+   "same_found": true,
+   "cost_fixed": 1.0686625314637863,
+   "cost_app3": 1.0686625314637863,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4b",
+   "origin": 27,
+   "same_found": true,
+   "cost_fixed": 2.1870182209889024,
+   "cost_app3": 2.1870182209889024,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4b",
+   "origin": 28,
+   "same_found": true,
+   "cost_fixed": 3.3577122985533876,
+   "cost_app3": 3.3577122985533876,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4b",
+   "origin": 29,
+   "same_found": true,
+   "cost_fixed": 5.535369286424504,
+   "cost_app3": 5.535369286424504,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4b",
+   "origin": 30,
+   "same_found": true,
+   "cost_fixed": null,
+   "cost_app3": null,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4b",
+   "origin": 31,
+   "same_found": true,
+   "cost_fixed": 3.517528279754677,
+   "cost_app3": 3.517528279754677,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4b",
+   "origin": 32,
+   "same_found": true,
+   "cost_fixed": 1.5915587790758672,
+   "cost_app3": 1.5915587790758672,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4b",
+   "origin": 33,
+   "same_found": true,
+   "cost_fixed": 2.2529251481772086,
+   "cost_app3": 2.2529251481772086,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4b",
+   "origin": 34,
+   "same_found": true,
+   "cost_fixed": 1.9226573120045223,
+   "cost_app3": 1.9226573120045223,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4b",
+   "origin": 35,
+   "same_found": true,
+   "cost_fixed": 3.69163676421054,
+   "cost_app3": 3.69163676421054,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4b",
+   "origin": 36,
+   "same_found": true,
+   "cost_fixed": 4.551564469775901,
+   "cost_app3": 4.551564469775901,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4b",
+   "origin": 37,
+   "same_found": true,
+   "cost_fixed": null,
+   "cost_app3": null,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4b",
+   "origin": 38,
+   "same_found": true,
+   "cost_fixed": 4.866922228801176,
+   "cost_app3": 4.866922228801176,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4b",
+   "origin": 39,
+   "same_found": true,
+   "cost_fixed": 3.89451522681782,
+   "cost_app3": 3.89451522681782,
+   "same_shelter": true
+  },
+  {
+   "scenario": "S4b",
+   "origin": 40,
+   "same_found": true,
+   "cost_fixed": 4.2719242605625505,
+   "cost_app3": 4.2719242605625505,
+   "same_shelter": true
+  }
+ ],
+ "verify": []
+}
