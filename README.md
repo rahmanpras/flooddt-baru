@@ -6,8 +6,10 @@ This repository contains the prototype and the complete executable configuration
 > “City Digital Twin for Adaptive Flood Evacuation Based on Hydrological–Hydrodynamic Simulation”,
 > submitted to the *International Journal of Intelligent Engineering and Systems* (IJIES), paper ID 20265129.
 
-The state that corresponds to the manuscript is frozen at the release tag **`ijies-revision-1`**. Later commits may
-change the code; use the tag to reproduce the reported numbers.
+The state that corresponds to the manuscript is frozen at the release tag **`ijies-revision-2`**
+(https://github.com/rahmanpras/flooddt-baru/releases/tag/ijies-revision-2). Later commits may change the code; use the
+tag to reproduce the reported numbers. (`ijies-revision-1` is the state of the previous revision round, before the
+mode-specific robustness analysis was added.)
 
 The prototype couples SCS Curve Number runoff, a two-dimensional diffusion-wave inundation model, and a flood-aware
 multi-shelter Dijkstra router, with a 2D (Leaflet.js) and 3D (CesiumJS) web interface. It is a research prototype for
@@ -24,8 +26,8 @@ offline scenario planning, not validated operational decision support (see Secti
 | `backend/validate_flood.py` | Spatial validation against the BPBD flood map (CSI, POD, FAR, accuracy) |
 | `backend/tools/` | Diagnostic scripts used during development (raster inspection, map plots); not needed for any reported result |
 | `worker/` | Python machine-learning service (Flask, port 5000): auxiliary Gradient Boosting early-warning module with data preparation, training script, and trained weights in `worker/models/` |
-| `config/production_config.json` | Canonical production configuration (Table 17 of the manuscript) |
-| `experiments/` | Controlled routing evaluation, timing, functional routing tests, table and figure scripts; outputs in `experiments/results/` |
+| `config/production_config.json` | Canonical production configuration (Table 18 of the manuscript) |
+| `experiments/` | Controlled routing evaluation and its mode-specific robustness analysis, timing, functional routing tests, table and figure scripts; outputs in `experiments/results/` |
 
 ## Requirements
 
@@ -85,8 +87,9 @@ scripts marked *server*. All other scripts are standalone.
 | Table 7 and Section 4.3.1 (hydrodynamic runtime, 10 runs) — *server* | `bash experiments/hydro_timing.sh` | `experiments/results/hydro_timing_P137_rerun.csv` |
 | Table 9 (functional routing tests) — *server* | `node experiments/functional_routing_tests.js` | `experiments/results/functional_routing_P137_geofix.json` |
 | Tables 5, 11–13, binary-heap check (controlled routing evaluation) | `node experiments/synthetic_routing_eval.js`, then `python experiments/analyze_results.py` | `experiments/results/` (`design.json`, `runs.csv`, `checks.json`, `summary.md`, `rasters/`) |
-| Table 14 (spatial validation) — *server* | `python backend/validate_flood.py` | `backend/data/validation/results.json` |
-| Table 15 (ML predictor) | `python worker/prepare_data.py`, then `python worker/train_real_data.py` | `worker/models/` |
+| Table 14 (ranking under mode-specific hazard limits; needs the outputs of the previous row) | `node experiments/mode_criteria_robustness.js` | `experiments/results/mode_robustness_runs.csv`, `mode_robustness_summary.json`, `mode_robustness_summary.md` |
+| Table 15 (spatial validation) — *server* | `python backend/validate_flood.py` | `backend/data/validation/results.json` |
+| Table 16 (ML predictor) | `python worker/prepare_data.py`, then `python worker/train_real_data.py` | `worker/models/` |
 | Fig. 1, Fig. 2 | `python experiments/plot_fig1.py`, `python experiments/plot_fig2.py` | `experiments/results/*.png` |
 
 Notes:
@@ -102,6 +105,12 @@ Notes:
 * The ML model in `worker/models/` was trained by `worker/train_real_data.py` (Gradient Boosting, 300 estimators,
   maximum depth 5, learning rate 0.05, subsample 0.8, `random_state = 42`, 80/20 split). It is auxiliary and is not
   used by any routing result.
+* The mode-specific robustness analysis takes depth limits from the flood hazard vulnerability classes of the
+  Australian Institute for Disaster Resilience (Guideline 7-3, 2017): 0.30 m for small vehicles (cars; motorcycles
+  assigned here), 0.50 m for large vehicles and for children and the elderly on foot, and 1.20 m for able-bodied adults
+  on foot. It scales the depth bands of scenarios S1–S4 by 0.5, 0.75, 1, 1.5, and 2 (0.75 was added after a first run,
+  as noted in the script header) and checks, at scale 1, that rasters and routes equal the archived main experiment.
+  The deployed router still uses one closure depth (0.50 m) for every mode.
 * The deployed routing endpoint uses a linear-scan Dijkstra; the binary-heap search used for the timing results of the
   controlled evaluation lives in `experiments/synthetic_routing_eval.js` and returns identical optimal costs.
 * The deployed-endpoint latencies in Table 8 are single instrumented runs and are reported as indicative only.
